@@ -1,0 +1,184 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 35%;
+
+  @media(max-width: $width-lg) {
+    flex-basis: 0;
+  }
+}
+
+.contacts--narrow {
+  flex-basis: 18%;
+
+  // @media(max-width: $width-md) {
+  //   justify-content: space-between;
+  // }
+}
+
+.contacts__lang svg {
+  margin-top: -2px;
+}
+
+.contacts__lang ul {
+  position: relative;
+  display: none;
+
+  min-width: 68px;
+}
+
+.contacts__lang:hover ul {
+  position: absolute;
+  top: 35px;
+  display: block;
+
+  width: 100%;
+}
+
+.contacts__lang a:hover {
+  color: #cfa55b;
+  transition: ease-in-out 0.3s;
+}
+
+.contacts__lang {
+  @media(max-width: $width-lg) {
+    display: none;
+  }
+}
+
+.contacts__lang--mobmenu {
+  display: none;
+}
+
+.nav.active .contacts__lang--mobmenu {
+  display: block;
+}
+
+.contacts__social {
+  display: flex;
+  align-items: center;
+  font-size: 0;
+
+  @media(max-width: $width-md) {
+    transform: scale(1.3);
+    margin: 32px 13px 0 13px;
+  }
+}
+
+.contacts__social:hover {
+  color: #cfa55b;
+  transition: ease-in-out 0.3s;
+}
+
+.contacts__social--header {
+  z-index: 2;
+
+  @media(max-width: $width-lg) {
+    margin: 0 0 0 22px;
+  }
+}
+
+.contacts__social--header svg {
+  fill: #282b3a;
+
+  @media(max-width: $width-lg) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.contacts__social--white svg {
+  @media(max-width: $width-lg) {
+    fill: #ffffff;
+  }
+}
+
+.phone.contacts__white {
+  fill: #ffffff;
+}
+
+.contacts__social:hover svg {
+  fill: #cfa55b;
+
+  transition: ease-in-out 0.3s;
+}
+
+.contacts__social--footer svg {
+  fill: #ffffff;
+}
+
+.contacts__phone {
+  margin-left: 12px;
+  font-size: 1rem;
+
+  @media(max-width: $width-lg) {
+    display: none;
+  }
+}
+
+.contacts__phone--white {
+  color: #ffffff;
+}
+
+.contacts__social--mobile {
+  @media(max-width: $width-md) {
+    display: none;
+  }
+}
+
+.contacts__social--footer:hover .contacts__phone--white {
+  color: #cfa55b;
+  transition: ease-in-out 0.3s;
+}
+
+.contacts__social--desktop {
+  @media(max-width: $width-lg) {
+    display: none;
+  }
+}
+
+.contacts__mobmenu {
+  display: none;
+
+  justify-content: center;
+}
+
+.nav.active .contacts__mobmenu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  svg {
+    margin: 0 12px;
+
+    transform: scale(1.6);
+  }
+}
+
+.nav.active .contacts__lang--mobmenu {
+  display: block;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #ffffff;
+  }
+}
+
+.nav.active .contacts__lang--mobmenu a:hover {
+  color: #cfa55b;
+}
+
+.nav.active .nav__item {
+  margin-bottom: 0;
+  font-size: rem(18px);
+}
+
+.nav.active .nav__item:hover {
+  color: #cfa55b;
+
+  transition: ease-in-out 0.3s;
+}

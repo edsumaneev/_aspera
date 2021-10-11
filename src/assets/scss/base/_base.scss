@@ -1,0 +1,163 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  min-width: 320px;
+
+  color: $font-main;
+  font-family: "OpenSans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+body.is-modal {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.container {
+  max-width: $width-workspace;
+}
+
+a {
+  color: #282b3a;
+  text-decoration: none;
+}
+
+// a:hover {
+//   color: #532ef8;
+// }
+
+// *:hover {
+//   transition: all ease-in-out 0.4s;
+// }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+// Размер шрифта под каждый возможный размер экрана
+// :root {
+//   font-size: calc(1vw + 0.5vh);
+//   // font-size: calc(1vw + 1vh + 0.5vmin);
+// }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  visibility: hidden;
+}
+
+#overlay.active {
+  z-index: 5;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+}
+
+// битые изображения 
+img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 2;
+  text-align: center;
+}
+
+// img:before {
+//   content: "Error img :(";
+//   display: block;
+//   margin-bottom: 10px;
+// }
+
+// img:after {
+//   content: "(url: "attr(src) ")";
+//   display: block;
+//   font-size: 12px;
+// }
+
+// container
+// .wrapper,
+// section,
+// header,
+// footer {
+//   padding: 0 15px;
+// }
+
+// @media (min-width: 575.98px) {
+
+//   .wrapper,
+//   section,
+//   header,
+//   footer {
+//     padding: 0 calc(50vw - 270px);
+//   }
+// }
+
+// @media (min-width: 767.98px) {
+
+//   .wrapper,
+//   section,
+//   header,
+//   footer {
+//     padding: 0 calc(50vw - 360px);
+//   }
+// }
+
+// @media (min-width: 991.98px) {
+
+//   .wrapper,
+//   section,
+//   header,
+//   footer {
+//     padding: 0 calc(50vw - 480px);
+//   }
+// }
+
+// @media (min-width: 1199.98px) {
+
+//   .wrapper,
+//   section,
+//   header,
+//   footer {
+//     padding: 0 calc(50vw - 590px);
+//   }
+// }

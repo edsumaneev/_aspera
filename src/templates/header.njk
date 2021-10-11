@@ -1,0 +1,18 @@
+{% if not(title) %}
+    {% set title = "Lorem ipsum" %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Author:">
+        <meta name="author" content="">
+        <title>{{ title }}</title>
+        <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+        <!-- build:css -->
+        styles.css
+        <!-- endbuild -->
+    </head>
+    <body>
