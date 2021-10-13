@@ -1,24 +1,81 @@
-{% set title = "Aspera | Home" %}
+{% set title = "Home | Aspera" %}
 {% include "../templates/header.njk" %}
 <div id="overlay"></div>
 
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav__item" href="index.html">О компании</a>
-      <a class="nav__item" href="projects-1.html">Каталог</a>
-      <a class="nav__item" href="ourclients.html">Полезное</a>
-      <a class="nav__item" href="media-page.html">Применение</a>
-      <a class="nav__item" href="media-page.html">Контакты</a>
-    </nav>
-    <div class="hamburger">
-      <span></span>
+<header>
+  <div class="header ">
+    <div class="header--home container">
+      <nav class="nav">
+        <a class="nav__item" href="about.html">О компании</a>
+        <a class="nav__item" href="#">Каталог</a>
+        <a class="nav__item" href="#">Полезное</a>
+        <a class="nav__item" href="#">Применение</a>
+      </nav>
+      <div class="header__logo">
+        <a href="index.html">home
+          <img src="assets/img/bg/logo-main.png" alt="Aspera" width="108" height="78">
+        </a>
+      </div>
+      <div class="header__wrapper">
+        <a class="" href="#">Контакты</a>
+        <label for="site-search">Поиск:</label>
+        <input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Поиск">
+        <button class="header__search" type="button">search
+          <span>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.0241 0.0300293C4.94547 0.0300293 0 4.96197 0 11.024C0 17.0861 4.94552 22.0181 11.0241 22.0181C17.1027 22.0181 22.0482 17.0861 22.0482 11.024C22.0482 4.96197 17.1027 0.0300293 11.0241 0.0300293ZM11.0241 20.2108C5.94186 20.2108 1.80723 16.0894 1.80723 11.024C1.80723 5.95831 5.94186 1.83721 11.0241 1.83721C16.1063 1.83721 20.241 5.95831 20.241 11.024C20.241 16.0894 16.1064 20.2108 11.0241 20.2108Z" />
+              <path
+                d="M24.7338 23.4255L18.8001 17.5219C18.4462 17.1701 17.8741 17.1716 17.522 17.5252C17.1702 17.8791 17.1717 18.4511 17.5254 18.8033L23.4591 24.7069C23.6356 24.8822 23.8658 24.9698 24.0965 24.9698C24.3287 24.9698 24.5606 24.881 24.7371 24.7036C25.089 24.3496 25.0874 23.7776 24.7338 23.4255Z" />
+            </svg>
+          </span>
+        </button>
+        <a class="header__bag" href="#">корзина
+          <span>
+            <svg width="21" height="27" viewBox="0 0 21 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.7751 6.05835H16.4585C17.4181 6.05835 18.2357 6.77446 18.3634 7.7259L18.3634 7.72602L20.5301 23.976L20.5301 23.9763C20.6024 24.5252 20.4353 25.0788 20.0702 25.4948C19.7052 25.9117 19.1787 26.15 18.6252 26.15H2.37515C1.82164 26.15 1.29499 25.9117 0.930969 25.4946M13.7751 6.05835L4.54182 6.20835C3.65849 6.20835 2.90328 6.86876 2.78661 7.74585L2.63793 7.72602L2.63792 7.72607L0.471267 23.976C0.471265 23.976 0.471262 23.976 0.471259 23.976C0.397798 24.5254 0.566292 25.0779 0.930969 25.4946M13.7751 6.05835V4.125C13.7751 2.31924 12.3058 0.85 10.5001 0.85C8.6943 0.85 7.22506 2.31924 7.22506 4.125V6.05835H13.7751ZM0.930969 25.4946C0.930991 25.4946 0.931013 25.4946 0.931034 25.4946L1.0439 25.3959L0.930882 25.4945C0.930911 25.4945 0.93094 25.4945 0.930969 25.4946ZM4.54182 7.40002H7.22506V8.8125C7.22506 9.18284 7.52555 9.48333 7.89589 9.48333C8.26623 9.48333 8.56672 9.18284 8.56672 8.8125V7.40002H12.4334V8.8125C12.4334 9.18284 12.7339 9.48333 13.1042 9.48333C13.4746 9.48333 13.7751 9.18284 13.7751 8.8125V7.40002H16.4585C16.7468 7.40002 16.9937 7.6162 17.0317 7.90207L17.0317 7.90213L19.1983 24.1521C19.2208 24.321 19.1722 24.4829 19.0603 24.6105L19.0599 24.6109C18.9489 24.7385 18.7955 24.8084 18.6252 24.8084H2.37515C2.20526 24.8084 2.05259 24.7388 1.94024 24.6108C1.82792 24.4817 1.77955 24.3207 1.80197 24.1521L3.96863 7.90213L3.96864 7.90207C4.00666 7.61607 4.25258 7.40002 4.54182 7.40002ZM12.4334 6.05835H8.56672V4.125C8.56672 3.05888 9.43394 2.19167 10.5001 2.19167C11.5662 2.19167 12.4334 3.05888 12.4334 4.125V6.05835Z"
+                stroke-width="0.8" />
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+      </div>
     </div>
   </div>
 </header>
-
-<main>
-
-</main>
+<section>
+  <div class="slider-header">
+    <div class="slider-header__slide">
+      <div class="slider-header__container">
+        <div class="slider-header__overlay"></div>
+        <img class="slider-header__img" src="assets/img/bg/slid-header-01@1920x960.png" alt="Aspera" width="1920"
+          height="960">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="intro container">
+  <div class="intro__wrapper">
+    <h2 class="title intro__title">Бережно сохраняя лучшее от природы</h2>
+    <div class="intro__img">
+      <img src="assets/img/bg/home-bg-01.png" alt="Aspera" width="648" height="648">
+    </div>
+    <div class="intro_dsc">
+      <p>
+        С 2006 года мы производим 100% натуральные эфирные, косметические и пищевые масла. Мы используем
+        высококачественное сырье, полученное из растений, произрастающих более чем в 30 странах мира.
+      </p>
+      <p>
+        Основной принцип нашей работы – сохранить лучшие природные свойства сырья на всех этапах его производства,
+        бережно
+        заботясь о природе и сохранении ее богатств.
+      </p>
+    </div>
+  </div>
+  <a class="intro__link" href="#">узнать больше<span>&rarr;</span></a>
+</section>
 
 {% include "../templates/footer.njk" %}

@@ -1,3 +1,14 @@
 .title {
-  font-size: rem(48px);
+  color: $font-title;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: rem(64px);
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+}
+
+.title--intro {
+  font-size: rem(54px);
+  line-height: 150%;
 }
