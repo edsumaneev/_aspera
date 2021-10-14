@@ -44,11 +44,12 @@
   }
 }
 
-.nav__item {
-  margin-right: 43px;
+.nav__link {
+  margin-right: 40px;
 
-  font-size: 16px;
-  line-height: 150%;
+  color: #3f3133;
+  line-height: 28px;
+  text-transform: uppercase;
 
   @media(max-width: $width-lg) {
     padding: 15px 0;
@@ -58,7 +59,12 @@
   }
 }
 
-.nav.active .nav__item {
+.nav__link:hover {
+  color: #8d4048;
+  transition: ease-in-out 0.3s;
+}
+
+.nav.active .nav__link {
   width: 100%;
 }
 

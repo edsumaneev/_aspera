@@ -34,9 +34,45 @@ $(document).keydown(function (eveent) {
     $('#overlay').removeClass('active');
   }
 });
+// slick sliders
+
+if ($('.home').length > 0) {
+  $(".products__slider").slick({
+    slidesToShow: 3,
+    infinite: true,
+    autoplay: false,
+    touchThreshold: 100,
+    dots: false,
+    prevArrow: $(".slick-prev"),
+    nextArrow: $(".slick-next"),
+    responsive: [{
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 737,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+};
+
+// search
+$(document).ready(function () {
+  $(".header__search").click(function () {
+    $(".header__inpsearch").toggleClass("active");
+    // $("input[type='search']").focus();
+    $("input[type='search']").focus();
+  });
+});
+// END search
+
 // timeline https://codepen.io/tutsplus/pen/ZKpNwm
 (function () {
-
   // VARIABLES
   const timeline = document.querySelector(".timeline ol"),
     elH = document.querySelectorAll(".timeline li > div"),
@@ -135,5 +171,4 @@ $(document).keydown(function (eveent) {
     hammer.on("swipeleft", () => next.click());
     hammer.on("swiperight", () => prev.click());
   }
-
 })();
