@@ -1,0 +1,73 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 22px 0 18px 0;
+  margin-top: 56px;
+
+  min-width: 390px;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.2em;
+
+  color: #3f3133;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  color: #8d4048;
+  border-color: #8d4048;
+
+  transition: ease-in-out 0.5s;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+// .arrowup
+.arrowup {
+  margin-top: 100px;
+  margin-bottom: 82px;
+
+  text-align: center;
+
+  @media screen and (max-width: $width-sm) {
+    margin-bottom: 30px;
+  }
+}
+
+.arrowup__link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.arrowup__link svg {
+  width: 100%;
+  fill: #3f3133;
+}
+
+.arrowup__link:hover svg {
+  fill: #8d4048;
+  transition: ease-in-out 0.5s;
+}
+
+.arrowup__link:hover .arrowup__text {
+  color: #8d4048;
+  transition: ease-in-out 0.5s;
+}
+
+.arrowup__text {
+  color: #3f3133;
+  line-height: 24px;
+  letter-spacing: 0.25em;
+}
+
+.useful .arrowup__text {
+  margin-top: 20px;
+}
+
+// ./arrowup

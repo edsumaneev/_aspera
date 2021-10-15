@@ -3,7 +3,7 @@
 <div id="overlay"></div>
 
 <header>
-  <div class="header">
+  <div class="header header-main">
     <div class="header__home container">
       <nav class="nav">
         <a class="nav__link" href="about.html">О компании</a>
@@ -18,11 +18,11 @@
       </div>
       <div class="header__wrapper">
         <a class="header__link" href="#">Контакты</a>
-        <form class="header__search">
+        <form class="header__search" action="#" method="post">
           <label for="site-search">Поиск:</label>
           <input class="header__inpsearch" type="search" id="site-search" name="q"
-            aria-label="Search through site content" placeholder="Поиск" hidden>
-          <button type="button">search
+            aria-label="Search through site content" placeholder="Поиск">
+          <button type="submit">search
             <span>
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -45,7 +45,6 @@
             </svg>
           </span>
         </a>
-        <span>
       </div>
       <div class="hamburger">
         <span></span>
@@ -54,15 +53,33 @@
   </div>
 </header>
 <section class="home">
-  <h1 class="title home__title">естественные способы укрепления здоровья</h1>
   <div class="slider-header">
     <div class="slider-header__slide">
       <div class="slider-header__container">
+        <h1 class="title home__title">естественные способы укрепления здоровья</h1>
         <div class="slider-header__overlay"></div>
         <img class="slider-header__img" src="assets/img/bg/slid-header-01@1920x960.png" alt="Aspera" width="1920"
           height="960">
       </div>
     </div>
+  </div>
+  <div class="home__arrow container">
+    <button class="home__prev">prev
+      <span>
+        <svg width="69" height="130" viewBox="0 0 69 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M65.6997 0.031738C67.2542 0.028839 68.5166 1.287 68.5195 2.8415C68.5209 3.59091 68.2232 4.30998 67.6925 4.83932L7.75644 64.7699L67.6925 124.7C68.7932 125.801 68.7932 127.585 67.6925 128.686C66.5919 129.786 64.8076 129.786 63.7069 128.686L1.78358 66.7624C0.684797 65.6634 0.684797 63.8816 1.78358 62.7823L63.7069 0.859253C64.2347 0.329651 64.9519 0.031738 65.6997 0.031738Z" />
+        </svg>
+      </span>
+    </button>
+    <button class="home__next">next
+      <span>
+        <svg width="69" height="130" viewBox="0 0 69 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.81144 129.479C2.25693 129.482 0.994545 128.224 0.991643 126.67C0.990323 125.92 1.28798 125.201 1.81864 124.672L61.7547 64.7414L1.81864 4.81108C0.718002 3.71045 0.718002 1.92611 1.81864 0.825475C2.91927 -0.275158 4.70361 -0.275158 5.80424 0.825475L67.7276 62.7488C68.8264 63.8479 68.8264 65.6296 67.7276 66.7289L5.80424 128.652C5.27649 129.182 4.55927 129.479 3.81144 129.479Z" />
+        </svg>
+      </span>
+    </button>
   </div>
 </section>
 <section class="intro">
@@ -83,9 +100,104 @@
       </p>
     </div>
   </div>
-  <a class="intro__link" href="#">узнать больше <span> &rarr;</span></a>
+  <div class="button-wrapper container">
+    <a class="button" href="#">узнать больше <span> &rarr;</span></a>
+  </div>
+</section>
+<section class="samples">
+  <div class="samples__slider">
+    <div class="samples__item">
+      <div class="samples__bg">
+        <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
+      </div>
+      <div class="samples__dsc">
+        <div class="samples__pic">
+          <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
+        </div>
+        <div class="samples__col">
+          <span class="samples__mark">новинка</span>
+          <h3 class="samples__type">эфирное масло</h3>
+          <h2 class="title samples__title">Грейпфрут</h2>
+          <div class="samples__text">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+          <p class="samples__price">5 200 <span>₽</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="samples__item">
+      <div class="samples__bg">
+        <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
+      </div>
+      <div class="samples__dsc">
+        <div class="samples__pic">
+          <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
+        </div>
+        <div class="samples__col">
+          <span class="samples__mark">новинка</span>
+          <h3 class="samples__type">эфирное масло</h3>
+          <h2 class="title samples__title">Грейпфрут</h2>
+          <div class="samples__text">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+          <p class="samples__price">5 200 <span>₽</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="samples__item">
+      <div class="samples__bg">
+        <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
+      </div>
+      <div class="samples__dsc">
+        <div class="samples__pic">
+          <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
+        </div>
+        <div class="samples__col">
+          <span class="samples__mark">новинка</span>
+          <h3 class="samples__type">эфирное масло</h3>
+          <h2 class="title samples__title">Грейпфрут</h2>
+          <div class="samples__text">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+          <p class="samples__price">5 200 <span>₽</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="samples__item">
+      <div class="samples__bg">
+        <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
+      </div>
+      <div class="samples__dsc">
+        <div class="samples__pic">
+          <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
+        </div>
+        <div class="samples__col">
+          <span class="samples__mark">новинка</span>
+          <h3 class="samples__type">эфирное масло</h3>
+          <h2 class="title samples__title">Грейпфрут</h2>
+          <div class="samples__text">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+          <p class="samples__price">5 200 <span>₽</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="products container">
+  <h2 class="title">Наша продукция</h2>
   <div class="products__slider">
     <div class="products__item">
       <div class="products__img">
@@ -128,7 +240,94 @@
       </a>
     </div>
   </div>
-
+  <button class="products__prev">prev
+    <span>
+      <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M7.9372e-06 4.00004L3.52088 7.52087L3.52088 4.69297L22 4.69297L22 3.30703L3.52088 3.30703L3.52088 0.479077L7.9372e-06 4.00004Z" />
+      </svg>
+    </span>
+  </button>
+  <button class="products__next">next
+    <span>
+      <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 3.99995L18.4791 0.479126V3.30703L0 3.30703L0 4.69297L18.4791 4.69297V7.52092L22 3.99995Z" />
+      </svg>
+    </span>
+  </button>
+</section>
+<section class="useful">
+  <h2 class="title">Полезное</h2>
+  <div class="useful__container container">
+    <a class="useful__link" href="#">
+      <div class="useful__img">
+        <img src="assets/img/bg/bg-useful-01.png" alt="Aspera" width="447" height="447">
+      </div>
+      <p class="useful__text">Свежие ароматы</p>
+      item
+    </a>
+    <a class="useful__link" href="#">
+      <div class="useful__img">
+        <img src="assets/img/bg/bg-useful-02.png" alt="Aspera" width="447" height="447">
+      </div>
+      <p class="useful__text">Как улучшить цвет лица</p>
+      item
+    </a>
+    <a class="useful__link" href="#">
+      <div class="useful__img">
+        <img src="assets/img/bg/bg-useful-03.png" alt="Aspera" width="447" height="447">
+      </div>
+      <p class="useful__text">Масло для релаксации</p>
+      item
+    </a>
+  </div>
+  <div class="button-wrapper container">
+    <a class="button" href="#">все статьи <span> &rarr;</span></a>
+  </div>
+  <div class="arrowup container">
+    <a class="arrowup__link" href="#top">
+      <span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.4512 4.82713L0.226182 14.0777C-0.0758873 14.3808 -0.0753794 14.8715 0.227745 15.1741C0.53083 15.4764 1.02181 15.4756 1.32411 15.1725L10.0001 6.47255L18.676 15.1728C18.9783 15.4759 19.469 15.4767 19.7721 15.1744C19.9241 15.0227 20 14.824 20 14.6253C20 14.4271 19.9246 14.2292 19.7737 14.0778L10.5489 4.82713C10.4037 4.68115 10.206 4.59924 10.0001 4.59924C9.79413 4.59924 9.59671 4.68139 9.4512 4.82713Z" />
+          <defs>
+            <rect width="20" height="20" fill="white" transform="translate(0 20) rotate(-90)" />
+          </defs>
+        </svg>
+      </span>
+      <p class="arrowup__text">наверх</p>
+    </a>
+  </div>
 </section>
 
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__wrapper">
+      <div class="footer__logo">
+        <img src="assets/img/bg/logo-footer.png" alt="Aspera" width="104" height="75">
+      </div>
+      <div>
+        <a class="footer__link" href="#">Для лица</a>
+        <a class="footer__link" href="#">Для тела</a>
+        <a class="footer__link" href="#">Для волос</a>
+      </div>
+    </div>
+    <div class="footer__wrapper footer__wrapper--right">
+      <a class="footer__otherlink" href="#">другие продукты</a>
+      <div class="footer__others">
+        <a class="footer__otherlink" href="#">
+          <img src="assets/img/bg/logo-floema.png" alt="Aspera" width="106" height="28">
+        </a>
+        <a href="#">
+          <img src="assets/img/bg/logo-zetta.png" alt="Aspera" width="93" height="33">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__rights container">
+    <p>© 1999–2021 «Аспера».</p>
+    <a class="footer__policy" href="#">Политика конфиденциальности</a>
+  </div>
+
+</footer>
 {% include "../templates/footer.njk" %}

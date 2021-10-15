@@ -1,14 +1,8 @@
 require('bootstrap');
-// require('../../../node_modules/magnific-popup/dist/jquery.magnific-popup');
 require('slick-carousel');
 require('hammerjs');
-// контент в iframe 
-// $('.popup-youtube').magnificPopup({
-//   type: 'iframe'
-// });
 
 // hamburger
-
 $('.hamburger').on('click', function (event) {
   event.preventDefault();
   $(this).toggleClass('active');
@@ -34,8 +28,8 @@ $(document).keydown(function (eveent) {
     $('#overlay').removeClass('active');
   }
 });
-// slick sliders
 
+// slick sliders
 if ($('.home').length > 0) {
   $(".products__slider").slick({
     slidesToShow: 3,
@@ -43,8 +37,8 @@ if ($('.home').length > 0) {
     autoplay: false,
     touchThreshold: 100,
     dots: false,
-    prevArrow: $(".slick-prev"),
-    nextArrow: $(".slick-next"),
+    prevArrow: $(".products__prev"),
+    nextArrow: $(".products__next"),
     responsive: [{
         breakpoint: 1100,
         settings: {
@@ -59,18 +53,51 @@ if ($('.home').length > 0) {
       }
     ]
   });
+
+  $(".samples__slider").slick({
+    slidesToShow: 1,
+    infinite: true,
+    autoplay: false,
+    touchThreshold: 100,
+    dots: true,
+    prevArrow: false,
+    nextArrow: false
+  });
 };
 
 // search
-$(document).ready(function () {
-  $(".header__search").click(function () {
-    $(".header__inpsearch").toggleClass("active");
-    // $("input[type='search']").focus();
-    $("input[type='search']").focus();
-  });
+$(".header__search").on("click", "button", function (e) {
+  if ($(".header__inpsearch").val() == "" || !$("input[type='search']").hasClass("active")) {
+    // если текстовое поле пустое или свернуто - не даем форме отправиться и сворачиваем/разворачиваем его
+    e.preventDefault();
+    e.stopPropagation();
+    $("input[type='search']").toggleClass("active");
+    $(".header__search").toggleClass("active");
+  }
+});
+// не даем свернуться текстовому полю при клике на нём
+$("body").on('click', "input[type='search']", function (e) {
+  e.stopPropagation();
+});
+// сворачиваем поле при клике вне поля
+$("html").on("click", function (e) {
+  $("input[type='search']").removeClass("active");
+  $(".header__search").removeClass("active");
 });
 // END search
-
+// fixed header
+if ($('.home').length > 0) {
+  jQuery(function ($) {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 74) {
+        $('.header-main').addClass('fixed');
+      } else if ($(this).scrollTop() < 74) {
+        $('.header-main').removeClass('fixed');
+      }
+    });
+  });
+};
+// 
 // timeline https://codepen.io/tutsplus/pen/ZKpNwm
 (function () {
   // VARIABLES

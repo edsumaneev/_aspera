@@ -7,8 +7,9 @@
 }
 
 .home__title {
-  z-index: 5;
+  z-index: 2;
   position: absolute;
+  padding: 330px;
 
   color: #ffffff;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
@@ -17,6 +18,48 @@
   line-height: 120%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.home__arrow {
+  z-index: 2;
+  position: absolute;
+  top: 330px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__prev,
+.home__next {
+  font-size: 0;
+
+  border: none;
+  background-color: transparent;
+
+  svg {
+    fill: #ffffff;
+    opacity: 0.6;
+  }
+}
+
+.home__prev:hover,
+.home__next:hover {
+  svg {
+    opacity: 1;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+.home__prev:focus,
+.home__next:focus {
+  outline: none;
+}
+
+.home__prev {
+  left: 0;
+}
+
+.home__next {
+  right: 0;
 }
 
 // ./home
@@ -44,9 +87,140 @@
 }
 
 // ./slider-header
+// .samples slider
+.samples {
+  overflow: hidden;
+
+  position: relative;
+  margin-bottom: 113px;
+
+  background: #fcf8f8;
+}
+
+.samples__slider {
+  width: 100%;
+}
+
+.samples__item {
+  position: relative;
+  display: flex !important;
+}
+
+.samples__bg {
+  width: 100%;
+  height: 960px;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+.samples__dsc {
+  position: relative;
+}
+
+.samples__dsc::after {
+  position: absolute;
+  content: "";
+  width: 1170px;
+  height: 1129px;
+  top: -560px;
+  right: -650px;
+
+  background: url("../img/bg/home-bg-04.png") no-repeat;
+}
+
+.samples__pic {
+  position: absolute;
+  left: -440px;
+  top: 77px;
+}
+
+.samples__col {
+  padding-top: 150px;
+  padding-left: 224px;
+}
+
+.samples__mark {
+  display: inline-block;
+  padding: 7px 30px;
+  margin-bottom: 36px;
+
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 17px;
+
+  text-align: center;
+  background-color: #8d4048;
+}
+
+.samples__type {
+  margin-bottom: 39px;
+
+  color: #3f3133;
+
+  font-size: 18px;
+  line-height: 25px;
+
+  letter-spacing: 0.2em;
+}
+
+.samples__title {
+  margin-bottom: 103px;
+  text-align: left;
+}
+
+.samples__text {
+  padding-right: 335px;
+  margin-bottom: 59px;
+}
+
+.samples__price {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 49px;
+
+  color: #3f3133;
+}
+
+.samples__price span {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.samples .slick-dots {
+  position: absolute;
+  display: flex;
+  right: 255px;
+  bottom: 135px;
+
+  font-size: 0;
+}
+
+.samples button {
+  margin: 0 6px;
+  width: 121px;
+  height: 13px;
+
+  border: 1px solid transparent;
+  border-radius: 3px;
+
+  background: #e2ceca;
+}
+
+.slick-active button {
+  background: transparent;
+  border-color: #e2ceca;
+}
+
+// ./samples
+
 
 // .products
 .products {
+  position: relative;
   margin-bottom: 105px;
 }
 
@@ -90,12 +264,31 @@
   line-height: 150%;
 }
 
+.products__prev,
+.products__next {
+  position: absolute;
+  right: 0;
+  bottom: 55px;
+
+  font-size: 0;
+  background: transparent;
+  border: none;
+
+  svg {
+    fill: #8d4048;
+  }
+}
+
+.products__prev {
+  right: 130px;
+}
+
 // ./products
 // .intro 
 .intro {
   position: relative;
   padding-top: 156px;
-  margin-bottom: 75px;
+  padding-bottom: 60px;
 
   overflow: hidden;
 }
@@ -146,17 +339,46 @@
   max-width: 523px;
 }
 
-.intro__link {
-  display: block;
-  margin-top: 56px;
+// ./intro
+// .useful
 
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: 0.2em;
+.useful__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
 
+.useful__img {
+  margin-bottom: 30px;
+}
+
+.useful__link {
+  display: inline-block;
+  margin: 0 5px;
+  max-width: 447px;
+
+  font-size: 0;
+  line-height: 0;
+}
+
+.useful__link:hover .useful__img {
+  opacity: 0.5;
+  transition: ease-in-out 0.5s;
+}
+
+.useful__link:hover .useful__text {
+  color: #8d4048;
+  transition: ease-in-out 0.5s;
+}
+
+.useful__text {
   color: #3f3133;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 150%;
+
   text-align: center;
 }
 
-// ./intro
+// ./useful

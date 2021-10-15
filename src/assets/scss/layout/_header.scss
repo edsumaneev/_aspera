@@ -1,5 +1,5 @@
 .header {
-  z-index: 4;
+  z-index: 10;
   position: absolute;
   top: 74px;
   left: 0;
@@ -9,9 +9,19 @@
   background: rgba(255, 255, 255, 0.7);
 }
 
-.header__home {
-  z-index: 5;
+.header.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
 
+  // background: #fcf8f8;
+}
+
+// .header.fixed .header__search {
+//   // background: #fcf8f8;
+// }
+
+.header__home {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,11 +42,26 @@
 }
 
 .header__search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 40px;
+  width: 60px;
+  height: 60px;
   font-size: 0;
 
   svg {
     fill: #3f3133;
+  }
+}
+
+.header__search.active {
+  z-index: 20;
+  background: #fcf8f8;
+
+  svg {
+    fill: #8d4048;
   }
 }
 
@@ -52,15 +77,9 @@
   }
 }
 
-.header__search button[type='button'] {
+.header__search button[type='submit'] {
   background: transparent;
   border: none;
-}
-
-.header__search {
-  svg {
-    fill: #3f3133;
-  }
 }
 
 .header__bag:hover {
@@ -97,14 +116,9 @@
   transition: ease-in-out 0.3s;
 }
 
-
-.header__search {
-  position: relative;
-}
-
 .header__inpsearch {
   position: absolute;
-  // padding-left: 0.625rem;
+
   width: 0;
   height: 0;
   color: #3f3133;
@@ -114,28 +128,31 @@
   background-color: transparent;
 }
 
+.header__search::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+
+  top: 128px;
+  background: #e2ceca;
+  right: 10px;
+}
+
+.active.header__search::after {
+  width: 490px;
+  height: 1px;
+  transition: ease-in-out 0.8s;
+}
+
 .header__inpsearch.active {
-  padding-bottom: 12px;
+  padding-left: 28px;
+  padding-bottom: 0;
   width: 509px;
   right: 0;
-  height: 85px;
-  top: 30px;
+  height: 80px;
+  top: 59px;
   transition: all ease-in-out 0.3s;
   outline: none;
   background: #fcf8f8;
 }
-
-// .header__inpsearch::after.active {
-//   position: absolute;
-//   bottom: 10px;
-//   width: 488px;
-//   height: 1px;
-//   background: #e2ceca;
-// }
-
-// @media (max-width: 48rem) {
-//   .header__inpsearch.active {
-//     bottom: -4.375rem;
-//     background-color: rgba(255, 255, 255, 0.9);
-//   }
-// }
