@@ -11,8 +11,8 @@
     margin-top: 18px;
     margin-bottom: 18px;
 
-    width: 28px;
-    height: 28px;
+    width: 31px;
+    height: 31px;
     background-color: transparent;
     padding: 0;
     border: none;
@@ -41,12 +41,17 @@
 .hamburger.active::after,
 .hamburger.active::before {
   z-index: 10;
-  background-color: #f32929;
+  background-color: #3f3133;
 }
 
-.hamburger::after,
-.hamburger::before {
+.hamburger::after {
+  justify-self: right;
   width: 31px;
+}
+
+.hamburger::before {
+  width: 21px;
+  margin-right: auto;
 }
 
 .hamburger span {
@@ -61,15 +66,16 @@
 
 .hamburger.active::after,
 .hamburger.active::before {
-  width: 25px;
+  width: 31px;
 }
 
 .hamburger.active::before {
-  transform: translate(0, 1px) rotate(45deg);
+  transform: translate(0, -3px) rotate(45deg);
 }
 
 .hamburger.active::after {
-  transform: translate(0, -1px) rotate(-45deg);
+  // transform: translate(0, -1px) rotate(-45deg);
+  transform: translate(0, 4px) rotate(-45deg);
 }
 
 .hamburger:focus {

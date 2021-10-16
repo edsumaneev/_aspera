@@ -9,27 +9,64 @@
 .home__title {
   z-index: 2;
   position: absolute;
-  padding: 330px;
+  padding: 405px 330px 0 330px;
+  width: 100%;
 
   color: #ffffff;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 64px;
   line-height: 120%;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (max-width: $break-1720) {
+    padding: 360px 330px 0 330px;
+    font-size: 42px;
+    letter-spacing: 0.05em;
+  }
+
+  @media screen and (max-width: $break-1350) {
+    padding: 208px 330px 0 330px;
+
+    font-size: 38px;
+  }
+
+  @media screen and (max-width: $width-xl) {
+    padding: 208px 200px 0 200px;
+  }
+
+  @media screen and (max-width: $width-lg) {
+    padding: 208px 15px 0;
+    font-size: 32px;
+  }
 }
 
 .home__arrow {
   z-index: 2;
   position: absolute;
-  top: 330px;
+  top: 415px;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: $break-1720) {
+    top: 375px;
+  }
+
+  @media screen and (max-width: $break-1350) {
+    top: 220px;
+  }
+
+  @media screen and (max-width: $width-lg) {
+    top: unset;
+    bottom: 27px;
+  }
 }
 
 .home__prev,
 .home__next {
+  padding-right: 34px;
+  padding-left: 33px;
   font-size: 0;
 
   border: none;
@@ -38,6 +75,21 @@
   svg {
     fill: #ffffff;
     opacity: 0.6;
+  }
+
+  @media screen and (max-width: $break-1720) {
+    padding-right: 134px;
+    padding-left: 133px;
+
+    svg {
+      width: 36px;
+      height: 69px;
+    }
+  }
+
+  @media screen and (max-width: $width-lg) {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -62,14 +114,103 @@
   right: 0;
 }
 
-// ./home
-// .slider-header
-// .slider-header {
-//   margin-bottom: 156px;
-// }
+.home__down {
+  z-index: 3;
+  position: absolute;
 
-.slider-header__container {
+  bottom: 111px;
+  width: 200px;
+  height: 100px;
+
+  @media screen and (max-width: $width-lg) {
+    height: 95px;
+  }
+}
+
+.home__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.2em;
+
+  color: #ffffff;
+
+  svg {
+    margin-top: 20px;
+    fill: #ffffff;
+  }
+}
+
+.home__link:hover {
+  color: #8d4048;
+  transition: ease-in-out 0.3s;
+
+  svg {
+    fill: #8d4048;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+// ./home
+
+// .social
+.social {
+  z-index: 3;
+  position: absolute;
+  right: 52px;
+  top: 307px;
+
+  @media screen and (max-width: $break-1350) {
+    top: 175px;
+  }
+
+  @media screen and (max-width: $width-lg) {
+    display: none;
+  }
+}
+
+.social__item {
+  margin-bottom: 116px;
+
+  @media screen and (max-width: $break-1720) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (max-width: $break-1350) {
+    margin-bottom: 20px;
+  }
+}
+
+.social__link {
+  font-size: 0;
+
+  svg {
+    fill: #ffffff;
+  }
+}
+
+.social__link:hover {
+  svg {
+    fill: #8d4048;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+// ./social
+// .slider-header
+.slider-header {
+  width: 100%;
+}
+
+.slider-header__slide {
   position: relative;
+  max-height: 960px;
+
+  @media screen and (max-width: $width-lg) {
+    max-height: unset;
+    height: 569px;
+  }
 }
 
 .slider-header__overlay {
@@ -84,6 +225,11 @@
 
 .slider-header__img {
   width: 100%;
+
+  @media screen and (max-width: $width-lg) {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 // ./slider-header
@@ -125,7 +271,7 @@
   content: "";
   width: 1170px;
   height: 1129px;
-  top: -560px;
+  top: 0;
   right: -650px;
 
   background: url("../img/bg/home-bg-04.png") no-repeat;
@@ -241,7 +387,6 @@
 
 .products__link:hover {
   color: #8d4048;
-  // text-shadow: 5px 5px 15px #3f3133;
   transition: ease-in-out 0.3s;
 }
 
@@ -287,7 +432,7 @@
 // .intro 
 .intro {
   position: relative;
-  padding-top: 156px;
+  padding-top: 176px;
   padding-bottom: 60px;
 
   overflow: hidden;
@@ -296,7 +441,7 @@
 .intro::before {
   position: absolute;
   content: "";
-  top: 24px;
+  bottom: 0;
   left: 0;
   width: 294px;
   height: 936px;
@@ -341,6 +486,12 @@
 
 // ./intro
 // .useful
+
+.useful {
+  padding-top: 125px;
+
+  background: #fcf8f8;
+}
 
 .useful__container {
   display: flex;

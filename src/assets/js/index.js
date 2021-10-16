@@ -63,6 +63,16 @@ if ($('.home').length > 0) {
     prevArrow: false,
     nextArrow: false
   });
+
+  $(".slider-header").slick({
+    slidesToShow: 1,
+    infinite: true,
+    autoplay: false,
+    touchThreshold: 100,
+    dots: false,
+    prevArrow: $(".home__prev"),
+    nextArrow: $(".home__next")
+  });
 };
 
 // search
@@ -86,17 +96,17 @@ $("html").on("click", function (e) {
 });
 // END search
 // fixed header
-if ($('.home').length > 0) {
-  jQuery(function ($) {
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 74) {
-        $('.header-main').addClass('fixed');
-      } else if ($(this).scrollTop() < 74) {
-        $('.header-main').removeClass('fixed');
-      }
-    });
+// if ($('.home').length > 0) {
+jQuery(function ($) {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 74) {
+      $('.header--main').addClass('fixed');
+    } else if ($(this).scrollTop() < 74) {
+      $('.header--main').removeClass('fixed');
+    }
   });
-};
+});
+// };
 // 
 // timeline https://codepen.io/tutsplus/pen/ZKpNwm
 (function () {
