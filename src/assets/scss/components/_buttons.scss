@@ -14,6 +14,13 @@
   color: #3f3133;
   text-align: center;
   border: 1px solid transparent;
+
+  @media screen and (max-width: $width-md) {
+    margin-top: 0;
+    padding: 20px 0 18px 0;
+
+    min-width: 100%;
+  }
 }
 
 .button:hover {
@@ -36,8 +43,9 @@
 
   background: #fcf8f8;
 
-  @media screen and (max-width: $width-sm) {
-    margin-bottom: 30px;
+  @media screen and (max-width: $width-lg) {
+    padding-bottom: 30px;
+    margin-top: 80px;
   }
 }
 

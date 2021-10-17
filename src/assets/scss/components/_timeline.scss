@@ -4,6 +4,7 @@
 .section {
   background: #F45B69;
   padding: 50px 0;
+  margin-bottom: 50px;
 }
 
 .section .container {
@@ -28,6 +29,8 @@
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
+
+  padding-top: 80px;
 }
 
 .timeline ol {
@@ -40,10 +43,26 @@
 .timeline ol li {
   position: relative;
   display: inline-block;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   list-style-type: none;
-  width: 160px;
+  width: 362px;
   height: 3px;
   background: $font-main;
+}
+
+.timeline ol li span {
+  position: absolute;
+
+  right: 107%;
+  margin-top: -12px;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #3F3133;
 }
 
 .timeline ol li:last-child {
@@ -55,48 +74,71 @@
 }
 
 .timeline ol li:not(:last-child)::after {
-  content: '';
+  // content: "";
+  // position: absolute;
+  // top: 50%;
+  // left: calc(100% + 1px);
+  // bottom: 0;
+  // width: 12px;
+  // height: 12px;
+  // transform: translateY(-50%);
+  // border-radius: 50%;
+  // background: #F45B69;
+  content: "";
   position: absolute;
   top: 50%;
-  left: calc(100% + 1px);
+  left: calc(100% + -74px);
   bottom: 0;
-  width: 12px;
-  height: 12px;
+  width: 88px;
+  height: 88px;
   transform: translateY(-50%);
   border-radius: 50%;
-  background: #F45B69;
+  background: #fff;
+  border: 1px solid #E2CECA;
 }
 
 .timeline ol li div {
+  // position: absolute;
+  // left: calc(100% + 7px);
+  // width: 280px;
+  // padding: 15px;
+  // font-size: 1rem;
+  // white-space: normal;
+  // color: black;
+  // background: white;
   position: absolute;
-  left: calc(100% + 7px);
+  // left: calc(100% + 7px);
+  left: calc(50% + 7px);
   width: 280px;
   padding: 15px;
   font-size: 1rem;
   white-space: normal;
   color: black;
-  background: white;
+  background: #fff;
+  border-bottom: 1px solid #e2ceca;
+
+  height: auto;
 }
 
 .timeline ol li div::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 80px;
   width: 0;
   height: 0;
   border-style: solid;
 }
 
 .timeline ol li:nth-child(odd) div {
-  top: -16px;
+  top: -100px;
   transform: translateY(-100%);
 }
 
 .timeline ol li:nth-child(odd) div::before {
   top: 100%;
-  border-width: 8px 8px 0 0;
-  border-color: white transparent transparent transparent;
+  border-width: 60px 60px 0 60px;
+  border-color: #e2ceca transparent transparent transparent;
 }
 
 .timeline ol li:nth-child(even) div {
@@ -106,7 +148,7 @@
 .timeline ol li:nth-child(even) div::before {
   top: -8px;
   border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #e2ceca;
 }
 
 .timeline time {

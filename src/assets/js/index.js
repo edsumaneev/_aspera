@@ -69,6 +69,7 @@ if ($('.home').length > 0) {
     infinite: true,
     autoplay: false,
     touchThreshold: 100,
+    // fade: true,
     dots: false,
     prevArrow: $(".home__prev"),
     nextArrow: $(".home__next")
