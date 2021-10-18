@@ -157,7 +157,7 @@
 // .social
 .social {
   z-index: 3;
-  position: absolute;
+  position: fixed;
   right: 52px;
   top: 307px;
 
@@ -166,18 +166,8 @@
   }
 
   @media screen and (max-width: $width-lg) {
-    display: none;
-  }
-}
-
-.social--mobile {
-  display: none;
-
-  @media screen and (max-width: $width-lg) {
-    position: relative;
-    display: block;
-    right: 0;
-    top: 0;
+    bottom: 230px;
+    top: unset;
   }
 }
 
@@ -197,7 +187,13 @@
   font-size: 0;
 
   svg {
-    fill: #ffffff;
+    fill: #4e282c;
+  }
+
+  @media screen and (max-width: $width-lg) {
+    svg {
+      fill: #ffffff;
+    }
   }
 }
 

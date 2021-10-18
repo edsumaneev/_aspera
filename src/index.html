@@ -1,457 +1,397 @@
 {% set title = "Home | Aspera" %}
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Author:">
-  <meta name="author" content="">
-  <title>{{ title }}</title>
-  <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
-  <!-- build:css -->
-  styles.css
-  <!-- endbuild -->
-</head>
-
-<body>
-  <div id="overlay"></div>
-  <header>
-    <div class="header header--main">
-      <div class="header__home container">
-        <nav class="nav">
-          <a class="nav__link" href="about.html">О компании</a>
-          <a class="nav__link" href="#">Каталог</a>
-          <a class="nav__link" href="#">Полезное</a>
-          <a class="nav__link" href="#">Применение</a>
-          <a class="nav__link nav__link--mobile" href="#">Контакты</a>
-        </nav>
-        <div class="header__logo">
-          <a href="index.html">home
-            <img src="assets/img/bg/logo-main.png" alt="Aspera" width="108" height="78">
-          </a>
-        </div>
-        <div class="header__wrapper">
-          <a class="header__link" href="#">Контакты</a>
-          <form class="header__search" action="#" method="post">
-            <label for="site-search">Поиск:</label>
-            <input class="header__inpsearch" type="search" id="site-search" name="q"
-              aria-label="Search through site content" placeholder="Поиск">
-            <button type="submit">search
-              <span>
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M11.0241 0.0300293C4.94547 0.0300293 0 4.96197 0 11.024C0 17.0861 4.94552 22.0181 11.0241 22.0181C17.1027 22.0181 22.0482 17.0861 22.0482 11.024C22.0482 4.96197 17.1027 0.0300293 11.0241 0.0300293ZM11.0241 20.2108C5.94186 20.2108 1.80723 16.0894 1.80723 11.024C1.80723 5.95831 5.94186 1.83721 11.0241 1.83721C16.1063 1.83721 20.241 5.95831 20.241 11.024C20.241 16.0894 16.1064 20.2108 11.0241 20.2108Z" />
-                  <path
-                    d="M24.7338 23.4255L18.8001 17.5219C18.4462 17.1701 17.8741 17.1716 17.522 17.5252C17.1702 17.8791 17.1717 18.4511 17.5254 18.8033L23.4591 24.7069C23.6356 24.8822 23.8658 24.9698 24.0965 24.9698C24.3287 24.9698 24.5606 24.881 24.7371 24.7036C25.089 24.3496 25.0874 23.7776 24.7338 23.4255Z" />
-                </svg>
-              </span>
-            </button>
-          </form>
-          <a class="header__bag" href="#">корзина
+{% include "../templates/header.njk" %}
+<div id="overlay"></div>
+<header>
+  <div class="header header--main">
+    <div class="header__home container">
+      <nav class="nav">
+        <a class="nav__link" href="about.html">О компании</a>
+        <a class="nav__link" href="#">Каталог</a>
+        <a class="nav__link" href="#">Полезное</a>
+        <a class="nav__link" href="#">Применение</a>
+        <a class="nav__link nav__link--mobile" href="#">Контакты</a>
+      </nav>
+      <div class="header__logo">
+        <a href="index.html">home
+          <img src="assets/img/bg/logo-main.png" alt="Aspera" width="108" height="78">
+        </a>
+      </div>
+      <div class="header__wrapper">
+        <a class="header__link" href="#">Контакты</a>
+        <form class="header__search" action="#" method="post">
+          <label for="site-search">Поиск:</label>
+          <input class="header__inpsearch" type="search" id="site-search" name="q"
+            aria-label="Search through site content" placeholder="Поиск">
+          <button type="submit">search
             <span>
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M15.7749 5.05834H18.4584C19.418 5.05834 20.2356 5.77445 20.3633 6.72589L20.3633 6.72602L22.53 22.976L22.53 22.9763C22.6023 23.5252 22.4352 24.0788 22.0701 24.4948C21.7051 24.9117 21.1786 25.15 20.625 25.15H4.37503C3.82152 25.15 3.29487 24.9117 2.93085 24.4946M15.7749 5.05834L6.5417 5.20834C5.65836 5.20834 4.90315 5.86876 4.78649 6.74584L4.6378 6.72602L4.6378 6.72606L2.47115 22.976C2.47114 22.976 2.47114 22.976 2.47114 22.976C2.39768 23.5254 2.56617 24.0779 2.93085 24.4946M15.7749 5.05834V3.12499C15.7749 1.31923 14.3057 -0.150008 12.4999 -0.150008C10.6942 -0.150008 9.22494 1.31923 9.22494 3.12499V5.05834H15.7749ZM2.93085 24.4946C2.93087 24.4946 2.93089 24.4946 2.93091 24.4946L3.04378 24.3958L2.93076 24.4945C2.93079 24.4945 2.93082 24.4945 2.93085 24.4946ZM6.5417 6.40001H9.22494V7.81249C9.22494 8.18284 9.52543 8.48333 9.89577 8.48333C10.2661 8.48333 10.5666 8.18284 10.5666 7.81249V6.40001H14.4333V7.81249C14.4333 8.18284 14.7338 8.48333 15.1041 8.48333C15.4744 8.48333 15.7749 8.18284 15.7749 7.81249V6.40001H18.4584C18.7467 6.40001 18.9935 6.61619 19.0315 6.90207L19.0316 6.90212L21.1982 23.1521C21.2207 23.321 21.1721 23.4829 21.0602 23.6105L21.0598 23.6109C20.9488 23.7385 20.7954 23.8083 20.625 23.8083H4.37503C4.20514 23.8083 4.05247 23.7388 3.94012 23.6107C3.82779 23.4817 3.77942 23.3207 3.80185 23.1521L5.96851 6.90212L5.96851 6.90207C6.00654 6.61606 6.25245 6.40001 6.5417 6.40001ZM14.4333 5.05834H10.5666V3.12499C10.5666 2.05888 11.4338 1.19166 12.4999 1.19166C13.5661 1.19166 14.4333 2.05888 14.4333 3.12499V5.05834Z"
-                  fill="none" stroke-width="1" />
-                <defs>
-                  <rect width="25" height="25" fill="white" />
-                </defs>
+                  d="M11.0241 0.0300293C4.94547 0.0300293 0 4.96197 0 11.024C0 17.0861 4.94552 22.0181 11.0241 22.0181C17.1027 22.0181 22.0482 17.0861 22.0482 11.024C22.0482 4.96197 17.1027 0.0300293 11.0241 0.0300293ZM11.0241 20.2108C5.94186 20.2108 1.80723 16.0894 1.80723 11.024C1.80723 5.95831 5.94186 1.83721 11.0241 1.83721C16.1063 1.83721 20.241 5.95831 20.241 11.024C20.241 16.0894 16.1064 20.2108 11.0241 20.2108Z" />
+                <path
+                  d="M24.7338 23.4255L18.8001 17.5219C18.4462 17.1701 17.8741 17.1716 17.522 17.5252C17.1702 17.8791 17.1717 18.4511 17.5254 18.8033L23.4591 24.7069C23.6356 24.8822 23.8658 24.9698 24.0965 24.9698C24.3287 24.9698 24.5606 24.881 24.7371 24.7036C25.089 24.3496 25.0874 23.7776 24.7338 23.4255Z" />
               </svg>
             </span>
-          </a>
-        </div>
-        <div class="hamburger">
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </header>
-  <section class="home">
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link" href="#">vk
+          </button>
+        </form>
+        <a class="header__bag" href="#">корзина
           <span>
             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M22.9292 0H1.56398C0.699903 0 0 0.699903 0 1.56225V22.9274C0 23.7898 0.699903 24.4897 1.56398 24.4897H22.9274C23.7898 24.4897 24.4897 23.7898 24.4897 22.9274V1.56225C24.4914 0.698175 23.7915 0 22.9292 0ZM20.3145 14.9226C20.7621 15.3789 21.7333 16.1444 21.557 16.9238C21.3946 17.6393 20.3266 17.3783 19.2897 17.4198C18.1059 17.4699 17.4043 17.4959 16.6923 16.9238C16.357 16.6525 16.16 16.3311 15.8386 15.9716C15.5465 15.6467 15.1784 15.0643 14.6772 15.0868C13.7769 15.1317 14.0585 16.3864 13.7388 17.2418C8.7341 18.0299 6.72426 14.9382 4.95117 11.9381C4.09227 10.4847 2.85146 7.36367 2.85146 7.36367L6.39072 7.35158C6.39072 7.35158 7.52612 9.41672 7.82682 9.94899C8.08259 10.4018 8.36427 10.7612 8.65461 11.1656C8.89828 11.5009 9.28366 12.1576 9.70533 12.104C10.3914 12.0159 10.5158 9.35451 10.0907 8.46278C9.92134 8.1016 9.51523 7.97544 9.09529 7.85274C9.23699 6.95756 13.0649 6.77092 13.6835 7.46563C14.5822 8.47488 13.0614 11.2849 14.2919 12.104C16.02 11.1985 17.4959 7.40688 17.4959 7.40688L21.64 7.4328C21.64 7.4328 20.9919 9.48239 20.3127 10.3914C19.917 10.9237 18.6036 12.1092 18.6554 12.9888C18.6969 13.6853 19.7649 14.3627 20.3145 14.9226Z" />
+                d="M15.7749 5.05834H18.4584C19.418 5.05834 20.2356 5.77445 20.3633 6.72589L20.3633 6.72602L22.53 22.976L22.53 22.9763C22.6023 23.5252 22.4352 24.0788 22.0701 24.4948C21.7051 24.9117 21.1786 25.15 20.625 25.15H4.37503C3.82152 25.15 3.29487 24.9117 2.93085 24.4946M15.7749 5.05834L6.5417 5.20834C5.65836 5.20834 4.90315 5.86876 4.78649 6.74584L4.6378 6.72602L4.6378 6.72606L2.47115 22.976C2.47114 22.976 2.47114 22.976 2.47114 22.976C2.39768 23.5254 2.56617 24.0779 2.93085 24.4946M15.7749 5.05834V3.12499C15.7749 1.31923 14.3057 -0.150008 12.4999 -0.150008C10.6942 -0.150008 9.22494 1.31923 9.22494 3.12499V5.05834H15.7749ZM2.93085 24.4946C2.93087 24.4946 2.93089 24.4946 2.93091 24.4946L3.04378 24.3958L2.93076 24.4945C2.93079 24.4945 2.93082 24.4945 2.93085 24.4946ZM6.5417 6.40001H9.22494V7.81249C9.22494 8.18284 9.52543 8.48333 9.89577 8.48333C10.2661 8.48333 10.5666 8.18284 10.5666 7.81249V6.40001H14.4333V7.81249C14.4333 8.18284 14.7338 8.48333 15.1041 8.48333C15.4744 8.48333 15.7749 8.18284 15.7749 7.81249V6.40001H18.4584C18.7467 6.40001 18.9935 6.61619 19.0315 6.90207L19.0316 6.90212L21.1982 23.1521C21.2207 23.321 21.1721 23.4829 21.0602 23.6105L21.0598 23.6109C20.9488 23.7385 20.7954 23.8083 20.625 23.8083H4.37503C4.20514 23.8083 4.05247 23.7388 3.94012 23.6107C3.82779 23.4817 3.77942 23.3207 3.80185 23.1521L5.96851 6.90212L5.96851 6.90207C6.00654 6.61606 6.25245 6.40001 6.5417 6.40001ZM14.4333 5.05834H10.5666V3.12499C10.5666 2.05888 11.4338 1.19166 12.4999 1.19166C13.5661 1.19166 14.4333 2.05888 14.4333 3.12499V5.05834Z"
+                fill="none" stroke-width="1" />
               <defs>
-                <rect width="24.4897" height="24.4897" fill="white" />
+                <rect width="25" height="25" fill="white" />
               </defs>
             </svg>
           </span>
         </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#">inst
-          <span>
-            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M1.63265 0C0.730961 0 0 0.730961 0 1.63265V22.8571C0 23.7587 0.730961 24.4897 1.63265 24.4897H22.8571C23.7587 24.4897 24.4897 23.7587 24.4897 22.8571V1.63265C24.4897 0.730961 23.7587 0 22.8571 0H1.63265ZM22.8571 2.28571H3.91835V20.5713H22.8571V2.28571Z" />
-              <path
-                d="M20.9023 0H3.58736C1.60945 0 0 1.60945 0 3.58736V20.9023C0 22.8802 1.60945 24.4897 3.58736 24.4897H20.9023C22.8802 24.4897 24.4897 22.8802 24.4897 20.9023V3.58736C24.4897 1.60945 22.8802 0 20.9023 0ZM12.2927 18.6543C8.73204 18.6543 5.83544 15.7577 5.83544 12.197C5.83544 8.63638 8.73204 5.73977 12.2927 5.73977C15.8533 5.73977 18.7499 8.63638 18.7499 12.197C18.7499 15.7577 15.8533 18.6543 12.2927 18.6543ZM19.4674 7.17472C18.2806 7.17472 17.315 6.20912 17.315 5.0223C17.315 3.83548 18.2806 2.86989 19.4674 2.86989C20.6542 2.86989 21.6198 3.83548 21.6198 5.0223C21.6198 6.20912 20.6542 7.17472 19.4674 7.17472Z" />
-              <path
-                d="M19.4674 4.30483C19.0715 4.30483 18.7499 4.62638 18.7499 5.0223C18.7499 5.41822 19.0715 5.73977 19.4674 5.73977C19.8633 5.73977 20.1849 5.41822 20.1849 5.0223C20.1849 4.62638 19.8633 4.30483 19.4674 4.30483Z" />
-              <path
-                d="M12.2927 7.17472C9.52369 7.17472 7.27038 9.42803 7.27038 12.197C7.27038 14.966 9.52369 17.2193 12.2927 17.2193C15.0617 17.2193 17.315 14.966 17.315 12.197C17.315 9.42803 15.0617 7.17472 12.2927 7.17472Z" />
-              <defs>
-                <rect width="24.4897" height="24.4897" rx="5" fill="white" />
-              </defs>
-            </svg>
-          </span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#">fb
-          <span>
-            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M23.1379 2.77016e-08H1.35064C0.604619 0.000448449 -0.000149446 0.605516 2.77016e-08 1.35184V23.1391C0.000448449 23.8851 0.605516 24.4898 1.35184 24.4897H13.0819V15.0191H9.90111V11.3121H13.0819V8.5841C13.0819 5.4205 15.0132 3.69857 17.8353 3.69857C19.187 3.69857 20.3485 3.79931 20.6871 3.8443V7.1508H18.7411C17.2057 7.1508 16.9084 7.88038 16.9084 8.95121V11.3121H20.5795L20.1012 15.0191H16.9084V24.4897H23.1379C23.8843 24.4898 24.4895 23.8849 24.4897 23.1385C24.4897 23.1383 24.4897 23.1382 24.4897 23.1379V1.35064C24.4894 0.604619 23.8842 -0.000149446 23.1379 2.77016e-08Z" />
-            </svg>
-          </span>
-        </a>
-      </li>
-    </ul>
-    <div class="slider-header">
-      <div class="slider-header__slide">
-        <h1 class="title home__title">естественные способы укрепления здоровья</h1>
-        <div class="slider-header__overlay"></div>
-        <img class="slider-header__img" src="assets/img/bg/slid-header-01@1920x960.png" alt="Aspera" width="1920"
-          height="960">
       </div>
-      <div class="slider-header__slide">
-        <h1 class="title home__title">естественные способы укрепления</h1>
-        <div class="slider-header__overlay"></div>
-        <img class="slider-header__img" src="assets/img/bg/slid-header-01@1920x960.png" alt="Aspera" width="1920"
-          height="960">
-      </div>
-      <div class="slider-header__slide">
-        <h1 class="title home__title">способы укрепления здоровья</h1>
-        <div class="slider-header__overlay"></div>
-        <img class="slider-header__img" src="assets/img/bg/slid-header-01@1920x960.png" alt="Aspera" width="1920"
-          height="960">
+      <div class="hamburger">
+        <span></span>
       </div>
     </div>
-    <div class="home__arrow container">
-      <button class="home__prev">prev
+  </div>
+</header>
+<section class="home">
+  <ul class="social">
+    <li class="social__item">
+      <a class="social__link" href="#">vk
         <span>
-          <svg width="69" height="130" viewBox="0 0 69 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M65.6997 0.031738C67.2542 0.028839 68.5166 1.287 68.5195 2.8415C68.5209 3.59091 68.2232 4.30998 67.6925 4.83932L7.75644 64.7699L67.6925 124.7C68.7932 125.801 68.7932 127.585 67.6925 128.686C66.5919 129.786 64.8076 129.786 63.7069 128.686L1.78358 66.7624C0.684797 65.6634 0.684797 63.8816 1.78358 62.7823L63.7069 0.859253C64.2347 0.329651 64.9519 0.031738 65.6997 0.031738Z" />
-          </svg>
-        </span>
-      </button>
-      <button class="home__next">next
-        <span>
-          <svg width="69" height="130" viewBox="0 0 69 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M3.81144 129.479C2.25693 129.482 0.994545 128.224 0.991643 126.67C0.990323 125.92 1.28798 125.201 1.81864 124.672L61.7547 64.7414L1.81864 4.81108C0.718002 3.71045 0.718002 1.92611 1.81864 0.825475C2.91927 -0.275158 4.70361 -0.275158 5.80424 0.825475L67.7276 62.7488C68.8264 63.8479 68.8264 65.6296 67.7276 66.7289L5.80424 128.652C5.27649 129.182 4.55927 129.479 3.81144 129.479Z" />
-          </svg>
-        </span>
-      </button>
-    </div>
-    <div class="home__down">
-      <a class="home__link" href="#intro">узнать больше
-        <span>
-          <svg width="8" height="22" viewBox="0 0 8 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M4.00006 22L7.52089 18.4791L4.69298 18.4791L4.69298 -1.23612e-07L3.30705 -1.84193e-07L3.30704 18.4791L0.479091 18.4791L4.00006 22Z" />
-          </svg>
-        </span>
-      </a>
-    </div>
-  </section>
-  <section class="intro" id="intro">
-    <div class="intro__wrapper container">
-      <h2 class="title intro__title">Бережно сохраняя лучшее от природы</h2>
-      <div class="intro__img">
-        <img src="assets/img/bg/home-bg-01.png" alt="Aspera" width="648" height="648">
-      </div>
-      <div class="intro__dsc">
-        <p class="intro__paragraph">
-          С 2006 года мы производим 100% натуральные эфирные, косметические и пищевые масла. Мы используем
-          высококачественное сырье, полученное из растений, произрастающих более чем в 30 странах мира.
-        </p>
-        <p class="intro__paragraph">
-          Основной принцип нашей работы – сохранить лучшие природные свойства сырья на всех этапах его производства,
-          бережно
-          заботясь о природе и сохранении ее богатств.
-        </p>
-      </div>
-    </div>
-    <div class="button-wrapper container">
-      <a class="button" href="#">узнать больше <span> &rarr;</span></a>
-    </div>
-  </section>
-  <section class="samples">
-    <div class="samples__slider">
-      <div class="samples__item">
-        <div class="samples__bg">
-          <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
-        </div>
-        <div class="samples__dsc">
-          <div class="samples__pic">
-            <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="658" height="799">
-          </div>
-          <div class="samples__col">
-            <span class="samples__mark">новинка</span>
-            <h3 class="samples__type">эфирное масло</h3>
-            <h2 class="title samples__title">Грейпфрут</h2>
-            <div class="samples__text">
-              <p>
-                Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
-                лидерство. Способствует раскрепощенности и усилению полового влечения.
-              </p>
-            </div>
-            <p class="samples__price">5 200 <span>₽</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="samples__item">
-        <div class="samples__bg">
-          <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
-        </div>
-        <div class="samples__dsc">
-          <div class="samples__pic">
-            <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
-          </div>
-          <div class="samples__col">
-            <span class="samples__mark">новинка</span>
-            <h3 class="samples__type">эфирное масло</h3>
-            <h2 class="title samples__title">Грейпфрут</h2>
-            <div class="samples__text">
-              <p>
-                Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
-                лидерство. Способствует раскрепощенности и усилению полового влечения.
-              </p>
-            </div>
-            <p class="samples__price">5 200 <span>₽</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="samples__item">
-        <div class="samples__bg">
-          <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
-        </div>
-        <div class="samples__dsc">
-          <div class="samples__pic">
-            <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
-          </div>
-          <div class="samples__col">
-            <span class="samples__mark">новинка</span>
-            <h3 class="samples__type">эфирное масло</h3>
-            <h2 class="title samples__title">Грейпфрут</h2>
-            <div class="samples__text">
-              <p>
-                Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
-                лидерство. Способствует раскрепощенности и усилению полового влечения.
-              </p>
-            </div>
-            <p class="samples__price">5 200 <span>₽</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="samples__item">
-        <div class="samples__bg">
-          <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
-        </div>
-        <div class="samples__dsc">
-          <div class="samples__pic">
-            <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
-          </div>
-          <div class="samples__col">
-            <span class="samples__mark">новинка</span>
-            <h3 class="samples__type">эфирное масло</h3>
-            <h2 class="title samples__title">Грейпфрут</h2>
-            <div class="samples__text">
-              <p>
-                Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
-                лидерство. Способствует раскрепощенности и усилению полового влечения.
-              </p>
-            </div>
-            <p class="samples__price">5 200 <span>₽</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="products container">
-    <h2 class="title">Наша продукция</h2>
-    <div class="products__slider">
-      <div class="products__item">
-        <div class="products__img">
-          <img src="assets/img/bg/bg-prod-01.png" alt="Aspera" width="328" height="640">
-        </div>
-        <a class="products__link" href="#">
-          <h2 class="products__title">Эфирные масла</h2>
-        </a>
-      </div>
-      <div class="products__item">
-        <div class="products__img">
-          <img src="assets/img/bg/bg-prod-02.png" alt="Aspera" width="414" height="640">
-        </div>
-        <a class="products__link" href="#">
-          <h2 class="products__title">Косметические масла</h2>
-        </a>
-      </div>
-      <div class="products__item">
-        <div class="products__img">
-          <img src="assets/img/bg/bg-prod-03.png" alt="Aspera" width="407" height="640">
-        </div>
-        <a class="products__link" href="#">
-          <h2 class="products__title">Парфюмерно-косметические масла</h2>
-        </a>
-      </div>
-      <div class="products__item">
-        <div class="products__img">
-          <img src="assets/img/bg/bg-prod-01.png" alt="Aspera" width="328" height="640">
-        </div>
-        <a class="products__link" href="#">
-          <h2 class="products__title">Эфирные масла</h2>
-        </a>
-      </div>
-      <div class="products__item">
-        <div class="products__img">
-          <img src="assets/img/bg/bg-prod-02.png" alt="Aspera" width="407" height="640">
-        </div>
-        <a class="products__link" href="#">
-          <h2 class="products__title">Парфюмерно-косметические масла</h2>
-        </a>
-      </div>
-    </div>
-    <button class="products__prev">prev
-      <span>
-        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7.9372e-06 4.00004L3.52088 7.52087L3.52088 4.69297L22 4.69297L22 3.30703L3.52088 3.30703L3.52088 0.479077L7.9372e-06 4.00004Z" />
-        </svg>
-      </span>
-    </button>
-    <button class="products__next">next
-      <span>
-        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 3.99995L18.4791 0.479126V3.30703L0 3.30703L0 4.69297L18.4791 4.69297V7.52092L22 3.99995Z" />
-        </svg>
-      </span>
-    </button>
-  </section>
-  <section class="useful">
-    <h2 class="title">Полезное</h2>
-    <div class="useful__container container">
-      <a class="useful__link" href="#">
-        <div class="useful__img">
-          <img src="assets/img/bg/bg-useful-01.png" alt="Aspera" width="447" height="447">
-        </div>
-        <p class="useful__text">Свежие ароматы</p>
-        item
-      </a>
-      <a class="useful__link" href="#">
-        <div class="useful__img">
-          <img src="assets/img/bg/bg-useful-02.png" alt="Aspera" width="447" height="447">
-        </div>
-        <p class="useful__text">Как улучшить цвет лица</p>
-        item
-      </a>
-      <a class="useful__link" href="#">
-        <div class="useful__img">
-          <img src="assets/img/bg/bg-useful-03.png" alt="Aspera" width="447" height="447">
-        </div>
-        <p class="useful__text">Масло для релаксации</p>
-        item
-      </a>
-    </div>
-    <div class="button-wrapper container">
-      <a class="button" href="#">все статьи <span> &rarr;</span></a>
-    </div>
-    <div class="arrowup container">
-      <a class="arrowup__link" href="#top">
-        <span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M9.4512 4.82713L0.226182 14.0777C-0.0758873 14.3808 -0.0753794 14.8715 0.227745 15.1741C0.53083 15.4764 1.02181 15.4756 1.32411 15.1725L10.0001 6.47255L18.676 15.1728C18.9783 15.4759 19.469 15.4767 19.7721 15.1744C19.9241 15.0227 20 14.824 20 14.6253C20 14.4271 19.9246 14.2292 19.7737 14.0778L10.5489 4.82713C10.4037 4.68115 10.206 4.59924 10.0001 4.59924C9.79413 4.59924 9.59671 4.68139 9.4512 4.82713Z" />
+              d="M22.9292 0H1.56398C0.699903 0 0 0.699903 0 1.56225V22.9274C0 23.7898 0.699903 24.4897 1.56398 24.4897H22.9274C23.7898 24.4897 24.4897 23.7898 24.4897 22.9274V1.56225C24.4914 0.698175 23.7915 0 22.9292 0ZM20.3145 14.9226C20.7621 15.3789 21.7333 16.1444 21.557 16.9238C21.3946 17.6393 20.3266 17.3783 19.2897 17.4198C18.1059 17.4699 17.4043 17.4959 16.6923 16.9238C16.357 16.6525 16.16 16.3311 15.8386 15.9716C15.5465 15.6467 15.1784 15.0643 14.6772 15.0868C13.7769 15.1317 14.0585 16.3864 13.7388 17.2418C8.7341 18.0299 6.72426 14.9382 4.95117 11.9381C4.09227 10.4847 2.85146 7.36367 2.85146 7.36367L6.39072 7.35158C6.39072 7.35158 7.52612 9.41672 7.82682 9.94899C8.08259 10.4018 8.36427 10.7612 8.65461 11.1656C8.89828 11.5009 9.28366 12.1576 9.70533 12.104C10.3914 12.0159 10.5158 9.35451 10.0907 8.46278C9.92134 8.1016 9.51523 7.97544 9.09529 7.85274C9.23699 6.95756 13.0649 6.77092 13.6835 7.46563C14.5822 8.47488 13.0614 11.2849 14.2919 12.104C16.02 11.1985 17.4959 7.40688 17.4959 7.40688L21.64 7.4328C21.64 7.4328 20.9919 9.48239 20.3127 10.3914C19.917 10.9237 18.6036 12.1092 18.6554 12.9888C18.6969 13.6853 19.7649 14.3627 20.3145 14.9226Z" />
             <defs>
-              <rect width="20" height="20" fill="white" transform="translate(0 20) rotate(-90)" />
+              <rect width="24.4897" height="24.4897" fill="white" />
             </defs>
           </svg>
         </span>
-        <p class="arrowup__text">наверх</p>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link" href="#">inst
+        <span>
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.63265 0C0.730961 0 0 0.730961 0 1.63265V22.8571C0 23.7587 0.730961 24.4897 1.63265 24.4897H22.8571C23.7587 24.4897 24.4897 23.7587 24.4897 22.8571V1.63265C24.4897 0.730961 23.7587 0 22.8571 0H1.63265ZM22.8571 2.28571H3.91835V20.5713H22.8571V2.28571Z" />
+            <path
+              d="M20.9023 0H3.58736C1.60945 0 0 1.60945 0 3.58736V20.9023C0 22.8802 1.60945 24.4897 3.58736 24.4897H20.9023C22.8802 24.4897 24.4897 22.8802 24.4897 20.9023V3.58736C24.4897 1.60945 22.8802 0 20.9023 0ZM12.2927 18.6543C8.73204 18.6543 5.83544 15.7577 5.83544 12.197C5.83544 8.63638 8.73204 5.73977 12.2927 5.73977C15.8533 5.73977 18.7499 8.63638 18.7499 12.197C18.7499 15.7577 15.8533 18.6543 12.2927 18.6543ZM19.4674 7.17472C18.2806 7.17472 17.315 6.20912 17.315 5.0223C17.315 3.83548 18.2806 2.86989 19.4674 2.86989C20.6542 2.86989 21.6198 3.83548 21.6198 5.0223C21.6198 6.20912 20.6542 7.17472 19.4674 7.17472Z" />
+            <path
+              d="M19.4674 4.30483C19.0715 4.30483 18.7499 4.62638 18.7499 5.0223C18.7499 5.41822 19.0715 5.73977 19.4674 5.73977C19.8633 5.73977 20.1849 5.41822 20.1849 5.0223C20.1849 4.62638 19.8633 4.30483 19.4674 4.30483Z" />
+            <path
+              d="M12.2927 7.17472C9.52369 7.17472 7.27038 9.42803 7.27038 12.197C7.27038 14.966 9.52369 17.2193 12.2927 17.2193C15.0617 17.2193 17.315 14.966 17.315 12.197C17.315 9.42803 15.0617 7.17472 12.2927 7.17472Z" />
+            <defs>
+              <rect width="24.4897" height="24.4897" rx="5" fill="white" />
+            </defs>
+          </svg>
+        </span>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link" href="#">fb
+        <span>
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M23.1379 2.77016e-08H1.35064C0.604619 0.000448449 -0.000149446 0.605516 2.77016e-08 1.35184V23.1391C0.000448449 23.8851 0.605516 24.4898 1.35184 24.4897H13.0819V15.0191H9.90111V11.3121H13.0819V8.5841C13.0819 5.4205 15.0132 3.69857 17.8353 3.69857C19.187 3.69857 20.3485 3.79931 20.6871 3.8443V7.1508H18.7411C17.2057 7.1508 16.9084 7.88038 16.9084 8.95121V11.3121H20.5795L20.1012 15.0191H16.9084V24.4897H23.1379C23.8843 24.4898 24.4895 23.8849 24.4897 23.1385C24.4897 23.1383 24.4897 23.1382 24.4897 23.1379V1.35064C24.4894 0.604619 23.8842 -0.000149446 23.1379 2.77016e-08Z" />
+          </svg>
+        </span>
+      </a>
+    </li>
+  </ul>
+  <div class="slider-header">
+    <div class="slider-header__slide">
+      <h1 class="title home__title">естественные способы укрепления здоровья</h1>
+      <div class="slider-header__overlay"></div>
+      <img class="slider-header__img" src="assets/img/bg/slid-header-01@1920x960.png" alt="Aspera" width="1920"
+        height="960">
+    </div>
+    <div class="slider-header__slide">
+      <h1 class="title home__title">естественные способы укрепления</h1>
+      <div class="slider-header__overlay"></div>
+      <img class="slider-header__img" src="assets/img/bg/slid-header-01@1920x960.png" alt="Aspera" width="1920"
+        height="960">
+    </div>
+    <div class="slider-header__slide">
+      <h1 class="title home__title">способы укрепления здоровья</h1>
+      <div class="slider-header__overlay"></div>
+      <img class="slider-header__img" src="assets/img/bg/slid-header-01@1920x960.png" alt="Aspera" width="1920"
+        height="960">
+    </div>
+  </div>
+  <div class="home__arrow container">
+    <button class="home__prev">prev
+      <span>
+        <svg width="69" height="130" viewBox="0 0 69 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M65.6997 0.031738C67.2542 0.028839 68.5166 1.287 68.5195 2.8415C68.5209 3.59091 68.2232 4.30998 67.6925 4.83932L7.75644 64.7699L67.6925 124.7C68.7932 125.801 68.7932 127.585 67.6925 128.686C66.5919 129.786 64.8076 129.786 63.7069 128.686L1.78358 66.7624C0.684797 65.6634 0.684797 63.8816 1.78358 62.7823L63.7069 0.859253C64.2347 0.329651 64.9519 0.031738 65.6997 0.031738Z" />
+        </svg>
+      </span>
+    </button>
+    <button class="home__next">next
+      <span>
+        <svg width="69" height="130" viewBox="0 0 69 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.81144 129.479C2.25693 129.482 0.994545 128.224 0.991643 126.67C0.990323 125.92 1.28798 125.201 1.81864 124.672L61.7547 64.7414L1.81864 4.81108C0.718002 3.71045 0.718002 1.92611 1.81864 0.825475C2.91927 -0.275158 4.70361 -0.275158 5.80424 0.825475L67.7276 62.7488C68.8264 63.8479 68.8264 65.6296 67.7276 66.7289L5.80424 128.652C5.27649 129.182 4.55927 129.479 3.81144 129.479Z" />
+        </svg>
+      </span>
+    </button>
+  </div>
+  <div class="home__down">
+    <a class="home__link" href="#intro">узнать больше
+      <span>
+        <svg width="8" height="22" viewBox="0 0 8 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4.00006 22L7.52089 18.4791L4.69298 18.4791L4.69298 -1.23612e-07L3.30705 -1.84193e-07L3.30704 18.4791L0.479091 18.4791L4.00006 22Z" />
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
+<section class="intro" id="intro">
+  <div class="intro__wrapper container">
+    <h2 class="title intro__title">Бережно сохраняя лучшее от природы</h2>
+    <div class="intro__img">
+      <img src="assets/img/bg/home-bg-01.png" alt="Aspera" width="648" height="648">
+    </div>
+    <div class="intro__dsc">
+      <p class="intro__paragraph">
+        С 2006 года мы производим 100% натуральные эфирные, косметические и пищевые масла. Мы используем
+        высококачественное сырье, полученное из растений, произрастающих более чем в 30 странах мира.
+      </p>
+      <p class="intro__paragraph">
+        Основной принцип нашей работы – сохранить лучшие природные свойства сырья на всех этапах его производства,
+        бережно
+        заботясь о природе и сохранении ее богатств.
+      </p>
+    </div>
+  </div>
+  <div class="button-wrapper container">
+    <a class="button" href="#">узнать больше <span> &rarr;</span></a>
+  </div>
+</section>
+<section class="samples">
+  <div class="samples__slider">
+    <div class="samples__item">
+      <div class="samples__bg">
+        <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
+      </div>
+      <div class="samples__dsc">
+        <div class="samples__pic">
+          <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="658" height="799">
+        </div>
+        <div class="samples__col">
+          <span class="samples__mark">новинка</span>
+          <h3 class="samples__type">эфирное масло</h3>
+          <h2 class="title samples__title">Грейпфрут</h2>
+          <div class="samples__text">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+          <p class="samples__price">5 200 <span>₽</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="samples__item">
+      <div class="samples__bg">
+        <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
+      </div>
+      <div class="samples__dsc">
+        <div class="samples__pic">
+          <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
+        </div>
+        <div class="samples__col">
+          <span class="samples__mark">новинка</span>
+          <h3 class="samples__type">эфирное масло</h3>
+          <h2 class="title samples__title">Грейпфрут</h2>
+          <div class="samples__text">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+          <p class="samples__price">5 200 <span>₽</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="samples__item">
+      <div class="samples__bg">
+        <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
+      </div>
+      <div class="samples__dsc">
+        <div class="samples__pic">
+          <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
+        </div>
+        <div class="samples__col">
+          <span class="samples__mark">новинка</span>
+          <h3 class="samples__type">эфирное масло</h3>
+          <h2 class="title samples__title">Грейпфрут</h2>
+          <div class="samples__text">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+          <p class="samples__price">5 200 <span>₽</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="samples__item">
+      <div class="samples__bg">
+        <img src="assets/img/bg/home-bg-03.png" alt="Aspera" width="1189" height="960">
+      </div>
+      <div class="samples__dsc">
+        <div class="samples__pic">
+          <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="912" height="800">
+        </div>
+        <div class="samples__col">
+          <span class="samples__mark">новинка</span>
+          <h3 class="samples__type">эфирное масло</h3>
+          <h2 class="title samples__title">Грейпфрут</h2>
+          <div class="samples__text">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+          <p class="samples__price">5 200 <span>₽</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="products container">
+  <h2 class="title">Наша продукция</h2>
+  <div class="products__slider">
+    <div class="products__item">
+      <div class="products__img">
+        <img src="assets/img/bg/bg-prod-01.png" alt="Aspera" width="328" height="640">
+      </div>
+      <a class="products__link" href="#">
+        <h2 class="products__title">Эфирные масла</h2>
       </a>
     </div>
-  </section>
-  <footer class="footer">
-    <div class="footer__container container">
-      <div class="footer__wrapper">
-        <div class="footer__logo">
-          <img src="assets/img/bg/logo-footer.png" alt="Aspera" width="104" height="75">
-        </div>
-        <div class="footer__row">
-          <div class="footer__col">
-            <a class="footer__link" href="#">Для лица</a>
-            <a class="footer__link" href="#">Для тела</a>
-            <a class="footer__link" href="#">Для волос</a>
-          </div>
-          <ul class="social social--mobile footer__col">
-            <li class="social__item">
-              <a class="social__link" href="#">vk
-                <span>
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M22.9292 0H1.56398C0.699903 0 0 0.699903 0 1.56225V22.9274C0 23.7898 0.699903 24.4897 1.56398 24.4897H22.9274C23.7898 24.4897 24.4897 23.7898 24.4897 22.9274V1.56225C24.4914 0.698175 23.7915 0 22.9292 0ZM20.3145 14.9226C20.7621 15.3789 21.7333 16.1444 21.557 16.9238C21.3946 17.6393 20.3266 17.3783 19.2897 17.4198C18.1059 17.4699 17.4043 17.4959 16.6923 16.9238C16.357 16.6525 16.16 16.3311 15.8386 15.9716C15.5465 15.6467 15.1784 15.0643 14.6772 15.0868C13.7769 15.1317 14.0585 16.3864 13.7388 17.2418C8.7341 18.0299 6.72426 14.9382 4.95117 11.9381C4.09227 10.4847 2.85146 7.36367 2.85146 7.36367L6.39072 7.35158C6.39072 7.35158 7.52612 9.41672 7.82682 9.94899C8.08259 10.4018 8.36427 10.7612 8.65461 11.1656C8.89828 11.5009 9.28366 12.1576 9.70533 12.104C10.3914 12.0159 10.5158 9.35451 10.0907 8.46278C9.92134 8.1016 9.51523 7.97544 9.09529 7.85274C9.23699 6.95756 13.0649 6.77092 13.6835 7.46563C14.5822 8.47488 13.0614 11.2849 14.2919 12.104C16.02 11.1985 17.4959 7.40688 17.4959 7.40688L21.64 7.4328C21.64 7.4328 20.9919 9.48239 20.3127 10.3914C19.917 10.9237 18.6036 12.1092 18.6554 12.9888C18.6969 13.6853 19.7649 14.3627 20.3145 14.9226Z" />
-                    <defs>
-                      <rect width="24.4897" height="24.4897" fill="white" />
-                    </defs>
-                  </svg>
-                </span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">inst
-                <span>
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M1.63265 0C0.730961 0 0 0.730961 0 1.63265V22.8571C0 23.7587 0.730961 24.4897 1.63265 24.4897H22.8571C23.7587 24.4897 24.4897 23.7587 24.4897 22.8571V1.63265C24.4897 0.730961 23.7587 0 22.8571 0H1.63265ZM22.8571 2.28571H3.91835V20.5713H22.8571V2.28571Z" />
-                    <path
-                      d="M20.9023 0H3.58736C1.60945 0 0 1.60945 0 3.58736V20.9023C0 22.8802 1.60945 24.4897 3.58736 24.4897H20.9023C22.8802 24.4897 24.4897 22.8802 24.4897 20.9023V3.58736C24.4897 1.60945 22.8802 0 20.9023 0ZM12.2927 18.6543C8.73204 18.6543 5.83544 15.7577 5.83544 12.197C5.83544 8.63638 8.73204 5.73977 12.2927 5.73977C15.8533 5.73977 18.7499 8.63638 18.7499 12.197C18.7499 15.7577 15.8533 18.6543 12.2927 18.6543ZM19.4674 7.17472C18.2806 7.17472 17.315 6.20912 17.315 5.0223C17.315 3.83548 18.2806 2.86989 19.4674 2.86989C20.6542 2.86989 21.6198 3.83548 21.6198 5.0223C21.6198 6.20912 20.6542 7.17472 19.4674 7.17472Z" />
-                    <path
-                      d="M19.4674 4.30483C19.0715 4.30483 18.7499 4.62638 18.7499 5.0223C18.7499 5.41822 19.0715 5.73977 19.4674 5.73977C19.8633 5.73977 20.1849 5.41822 20.1849 5.0223C20.1849 4.62638 19.8633 4.30483 19.4674 4.30483Z" />
-                    <path
-                      d="M12.2927 7.17472C9.52369 7.17472 7.27038 9.42803 7.27038 12.197C7.27038 14.966 9.52369 17.2193 12.2927 17.2193C15.0617 17.2193 17.315 14.966 17.315 12.197C17.315 9.42803 15.0617 7.17472 12.2927 7.17472Z" />
-                    <defs>
-                      <rect width="24.4897" height="24.4897" rx="5" fill="white" />
-                    </defs>
-                  </svg>
-                </span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">fb
-                <span>
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M23.1379 2.77016e-08H1.35064C0.604619 0.000448449 -0.000149446 0.605516 2.77016e-08 1.35184V23.1391C0.000448449 23.8851 0.605516 24.4898 1.35184 24.4897H13.0819V15.0191H9.90111V11.3121H13.0819V8.5841C13.0819 5.4205 15.0132 3.69857 17.8353 3.69857C19.187 3.69857 20.3485 3.79931 20.6871 3.8443V7.1508H18.7411C17.2057 7.1508 16.9084 7.88038 16.9084 8.95121V11.3121H20.5795L20.1012 15.0191H16.9084V24.4897H23.1379C23.8843 24.4898 24.4895 23.8849 24.4897 23.1385C24.4897 23.1383 24.4897 23.1382 24.4897 23.1379V1.35064C24.4894 0.604619 23.8842 -0.000149446 23.1379 2.77016e-08Z" />
-                  </svg>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
+    <div class="products__item">
+      <div class="products__img">
+        <img src="assets/img/bg/bg-prod-02.png" alt="Aspera" width="414" height="640">
       </div>
-      <div class="footer__wrapper footer__wrapper--right">
-        <a class="footer__otherlink" href="#">другие продукты</a>
-        <div class="footer__others">
-          <a class="footer__otherlink" href="#">
-            <img src="assets/img/bg/logo-floema.png" alt="Aspera" width="106" height="28">
-          </a>
-          <a href="#">
-            <img src="assets/img/bg/logo-zetta.png" alt="Aspera" width="93" height="33">
-          </a>
+      <a class="products__link" href="#">
+        <h2 class="products__title">Косметические масла</h2>
+      </a>
+    </div>
+    <div class="products__item">
+      <div class="products__img">
+        <img src="assets/img/bg/bg-prod-03.png" alt="Aspera" width="407" height="640">
+      </div>
+      <a class="products__link" href="#">
+        <h2 class="products__title">Парфюмерно-косметические масла</h2>
+      </a>
+    </div>
+    <div class="products__item">
+      <div class="products__img">
+        <img src="assets/img/bg/bg-prod-01.png" alt="Aspera" width="328" height="640">
+      </div>
+      <a class="products__link" href="#">
+        <h2 class="products__title">Эфирные масла</h2>
+      </a>
+    </div>
+    <div class="products__item">
+      <div class="products__img">
+        <img src="assets/img/bg/bg-prod-02.png" alt="Aspera" width="407" height="640">
+      </div>
+      <a class="products__link" href="#">
+        <h2 class="products__title">Парфюмерно-косметические масла</h2>
+      </a>
+    </div>
+  </div>
+  <button class="products__prev">prev
+    <span>
+      <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M7.9372e-06 4.00004L3.52088 7.52087L3.52088 4.69297L22 4.69297L22 3.30703L3.52088 3.30703L3.52088 0.479077L7.9372e-06 4.00004Z" />
+      </svg>
+    </span>
+  </button>
+  <button class="products__next">next
+    <span>
+      <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 3.99995L18.4791 0.479126V3.30703L0 3.30703L0 4.69297L18.4791 4.69297V7.52092L22 3.99995Z" />
+      </svg>
+    </span>
+  </button>
+</section>
+<section class="useful">
+  <h2 class="title">Полезное</h2>
+  <div class="useful__container container">
+    <a class="useful__link" href="#">
+      <div class="useful__img">
+        <img src="assets/img/bg/bg-useful-01.png" alt="Aspera" width="447" height="447">
+      </div>
+      <p class="useful__text">Свежие ароматы</p>
+      item
+    </a>
+    <a class="useful__link" href="#">
+      <div class="useful__img">
+        <img src="assets/img/bg/bg-useful-02.png" alt="Aspera" width="447" height="447">
+      </div>
+      <p class="useful__text">Как улучшить цвет лица</p>
+      item
+    </a>
+    <a class="useful__link" href="#">
+      <div class="useful__img">
+        <img src="assets/img/bg/bg-useful-03.png" alt="Aspera" width="447" height="447">
+      </div>
+      <p class="useful__text">Масло для релаксации</p>
+      item
+    </a>
+  </div>
+  <div class="button-wrapper container">
+    <a class="button" href="#">все статьи <span> &rarr;</span></a>
+  </div>
+  <div class="arrowup container">
+    <a class="arrowup__link" href="#top">
+      <span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.4512 4.82713L0.226182 14.0777C-0.0758873 14.3808 -0.0753794 14.8715 0.227745 15.1741C0.53083 15.4764 1.02181 15.4756 1.32411 15.1725L10.0001 6.47255L18.676 15.1728C18.9783 15.4759 19.469 15.4767 19.7721 15.1744C19.9241 15.0227 20 14.824 20 14.6253C20 14.4271 19.9246 14.2292 19.7737 14.0778L10.5489 4.82713C10.4037 4.68115 10.206 4.59924 10.0001 4.59924C9.79413 4.59924 9.59671 4.68139 9.4512 4.82713Z" />
+          <defs>
+            <rect width="20" height="20" fill="white" transform="translate(0 20) rotate(-90)" />
+          </defs>
+        </svg>
+      </span>
+      <p class="arrowup__text">наверх</p>
+    </a>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__wrapper">
+      <div class="footer__logo">
+        <img src="assets/img/bg/logo-footer.png" alt="Aspera" width="104" height="75">
+      </div>
+      <div class="footer__row">
+        <div class="footer__col">
+          <a class="footer__link" href="#">Для лица</a>
+          <a class="footer__link" href="#">Для тела</a>
+          <a class="footer__link" href="#">Для волос</a>
         </div>
       </div>
     </div>
-    <div class="footer__rights container">
-      <p>© 1999–2021 «Аспера».</p>
-      <a class="footer__policy" href="#">Политика конфиденциальности</a>
+    <div class="footer__wrapper footer__wrapper--right">
+      <a class="footer__otherlink" href="#">другие продукты</a>
+      <div class="footer__others">
+        <a class="footer__otherlink" href="#">
+          <img src="assets/img/bg/logo-floema.png" alt="Aspera" width="106" height="28">
+        </a>
+        <a href="#">
+          <img src="assets/img/bg/logo-zetta.png" alt="Aspera" width="93" height="33">
+        </a>
+      </div>
     </div>
-  </footer>
-  {% include "../templates/footer.njk" %}
+  </div>
+  <div class="footer__rights container">
+    <p>© 1999–2021 «Аспера».</p>
+    <a class="footer__policy" href="#">Политика конфиденциальности</a>
+  </div>
+</footer>
+{% include "../templates/footer.njk" %}
