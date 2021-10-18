@@ -1,0 +1,75 @@
+.useful {
+  padding-top: 125px;
+
+  background: #fcf8f8;
+
+  @media screen and (max-width: $width-lg) {
+    padding-top: 35px;
+    background-color: unset;
+  }
+}
+
+.useful--nobg {
+  padding-top: 0;
+  background-color: unset;
+}
+
+.useful__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60px;
+
+  @media screen and (max-width: $break-1350) {
+    justify-content: space-around;
+  }
+}
+
+.useful__img {
+  margin-bottom: 30px;
+
+  @media screen and (max-width: $width-lg) {
+    margin-bottom: 20px;
+  }
+}
+
+.useful__link {
+  display: inline-block;
+  margin: 0 5px;
+  max-width: 447px;
+
+  font-size: 0;
+  line-height: 0;
+
+  @media screen and (max-width: $break-1350) {
+    margin-bottom: 35px;
+  }
+}
+
+.useful__link:hover .useful__img {
+  opacity: 0.5;
+  transition: ease-in-out 0.5s;
+}
+
+.useful__link:hover .useful__text {
+  color: #8d4048;
+  transition: ease-in-out 0.5s;
+}
+
+.useful__link--margin {
+  margin-bottom: 45px;
+}
+
+.useful__text {
+  color: #3f3133;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 150%;
+
+  text-align: center;
+
+  @media screen and (max-width: $width-lg) {
+    font-size: 20px;
+  }
+}

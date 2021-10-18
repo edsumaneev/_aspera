@@ -9,7 +9,7 @@
 .home__title {
   z-index: 2;
   position: absolute;
-  padding: 405px 330px 0 330px;
+  padding: 405px 380px 0 380px;
   width: 100%;
 
   color: #ffffff;
@@ -153,66 +153,13 @@
 }
 
 // ./home
-
-// .social
-.social {
-  z-index: 3;
-  position: fixed;
-  right: 52px;
-  top: 307px;
-
-  @media screen and (max-width: $break-1350) {
-    top: 175px;
-  }
-
-  @media screen and (max-width: $width-lg) {
-    position: relative;
-    bottom: 0;
-    right: 30px;
-    top: unset;
-  }
-}
-
-.social__item {
-  margin-bottom: 116px;
-
-  @media screen and (max-width: $break-1720) {
-    margin-bottom: 50px;
-  }
-
-  @media screen and (max-width: $break-1350) {
-    margin-bottom: 20px;
-  }
-}
-
-.social__link {
-  font-size: 0;
-
-  svg {
-    fill: #4e282c;
-  }
-
-  @media screen and (max-width: $width-lg) {
-    svg {
-      fill: #ffffff;
-    }
-  }
-}
-
-.social__link:hover {
-  svg {
-    fill: #8d4048;
-    transition: ease-in-out 0.3s;
-  }
-}
-
-// ./social
 // .slider-header
 .slider-header {
   width: 100%;
 }
 
 .slider-header__slide {
+  overflow-y: hidden;
   position: relative;
   max-height: 960px;
 
@@ -667,73 +614,3 @@
 }
 
 // ./intro
-// .useful
-
-.useful {
-  padding-top: 125px;
-
-  background: #fcf8f8;
-
-  @media screen and (max-width: $width-lg) {
-    padding-top: 35px;
-    background-color: unset;
-  }
-}
-
-.useful__container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
-
-  @media screen and (max-width: $break-1350) {
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
-
-.useful__img {
-  margin-bottom: 30px;
-
-  @media screen and (max-width: $width-lg) {
-    margin-bottom: 20px;
-  }
-}
-
-.useful__link {
-  display: inline-block;
-  margin: 0 5px;
-  max-width: 447px;
-
-  font-size: 0;
-  line-height: 0;
-
-  @media screen and (max-width: $break-1350) {
-    margin-bottom: 35px;
-  }
-}
-
-.useful__link:hover .useful__img {
-  opacity: 0.5;
-  transition: ease-in-out 0.5s;
-}
-
-.useful__link:hover .useful__text {
-  color: #8d4048;
-  transition: ease-in-out 0.5s;
-}
-
-.useful__text {
-  color: #3f3133;
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
-  font-weight: 200;
-  font-size: 32px;
-  line-height: 150%;
-
-  text-align: center;
-
-  @media screen and (max-width: $width-lg) {
-    font-size: 20px;
-  }
-}
-
-// ./useful

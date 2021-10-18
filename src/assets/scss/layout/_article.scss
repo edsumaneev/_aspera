@@ -1,0 +1,39 @@
+.article__container {
+  padding-left: 158px;
+  padding-right: 158px;
+}
+
+.article__intro {
+  padding: 55px 270px;
+  margin-bottom: 80px;
+
+  border-top: 1px solid #e2ceca;
+  border-bottom: 1px solid #e2ceca;
+}
+
+.article__body {
+  padding: 0 270px;
+}
+
+.article__title {
+  position: relative;
+
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 150%;
+  color: #8d4048;
+
+  text-align: left;
+}
+
+.article__title::before {
+  position: absolute;
+  content: "";
+  left: -55px;
+  top: 20px;
+  width: 11px;
+  height: 11px;
+  background: #8d4048;
+}

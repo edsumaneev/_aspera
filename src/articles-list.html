@@ -1,5 +1,23 @@
 {% set title = "Статьи | Aspera" %}
 {% include "../templates/header.njk" %}
-
-
+<section class="useful useful--nobg">
+  <h1 class="title toptitle container">Статьи</h1>
+  <div class="useful__container container">
+    {% from "../templates/articles-list.njk" import articleslist %}
+    {% for articles in articles %}
+    {{ articleslist(articles.link, articles.imgsrc, articles.title) }}
+    {% endfor %}
+  </div>
+  <div class="showmore container">
+    <a class="showmore__link" href="#intro">узнать больше
+      <span>
+        <svg width="8" height="22" viewBox="0 0 8 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4.00006 22L7.52089 18.4791L4.69298 18.4791L4.69298 -1.23612e-07L3.30705 -1.84193e-07L3.30704 18.4791L0.479091 18.4791L4.00006 22Z" />
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
+{% include "../templates/arrowup.njk" %}
 {% include "../templates/footer.njk" %}

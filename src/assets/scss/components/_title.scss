@@ -16,3 +16,13 @@
     font-size: 32px;
   }
 }
+
+.toptitle {
+  padding-top: 285px;
+  margin-bottom: 75px;
+
+  @media screen and (max-width: $width-lg) {
+    padding-top: 125px;
+    margin-bottom: 35px;
+  }
+}

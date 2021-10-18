@@ -1,22 +1,11 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-// @import "../../../node_modules/bootstrap/scss/functions";
-// @import "../../../node_modules/bootstrap/scss/variables";
-// @import "../../../node_modules/bootstrap/scss/mixins";
-// @import "../../../node_modules/bootstrap/scss/root";
-
-// @import "../../../node_modules/bootstrap/scss/grid";
-// @import "../../../node_modules/bootstrap/scss/forms";
-// @import "../../../node_modules/bootstrap/scss/transitions";
-// // @import "../../../node_modules/bootstrap/scss/buttons";
-// @import "../../../node_modules/bootstrap/scss/nav";
-// @import "../../../node_modules/bootstrap/scss/navbar";
-
 
 @import "../../../node_modules/sass-rem/rem";
 @import "../../../node_modules/normalize.css/normalize";
 @import "base/_fonts.scss";
 @import "base/_variables.scss";
 @import "base/_base.scss";
+@import "mixins/_gradients.scss";
 @import "layout/_header.scss";
 @import "layout/_footer.scss";
 @import "components/_buttons.scss";
@@ -26,4 +15,11 @@
 @import "components/_nav.scss";
 @import "components/_contacts.scss";
 @import "components/_timeline.scss";
+@import "components/_useful.scss";
+@import "components/_arrowup.scss";
+@import "components/_showmore.scss";
+@import "components/_social.scss";
+@import "components/_imgtop.scss";
 @import "layout/_home.scss";
+@import "layout/_articles-list.scss";
+@import "layout/_article.scss";
