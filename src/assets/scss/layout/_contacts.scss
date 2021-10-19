@@ -1,0 +1,143 @@
+.contacts {
+  margin-bottom: 75px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 110px;
+}
+
+.contacts__address {
+  margin-right: 160px;
+  width: 25%;
+}
+
+.contacts__map {
+  position: relative;
+  width: 75%;
+  min-height: 960px;
+}
+
+.contacts__inner {
+  position: absolute;
+}
+
+.contacts__post {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.contacts__link {
+  margin-bottom: 35px;
+
+  color: #3f3133;
+}
+
+.contacts__link:hover {
+  color: #8d4048;
+  transition: ease-in-out 0.3s;
+}
+
+// .feedback
+.feedback__title {
+  margin-bottom: 115px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 524px;
+}
+
+.feedback__text,
+.feedback__input {
+  padding: 19px 0 18px 30px;
+  margin-bottom: 30px;
+  min-height: 65px;
+
+  color: #3f3133;
+  border: unset;
+  border-bottom: 1px solid #e2ceca;
+}
+
+.feedback__text {
+  min-height: 189px;
+  border-left: 1px solid #e2ceca;
+  border-right: 1px solid #e2ceca;
+}
+
+.feedback__text:focus,
+.feedback__input:focus {
+  outline: none;
+  border-color: #3f3133;
+}
+
+.feedback ::placeholder {
+  color: #977777;
+  font-size: 18px;
+}
+
+.feedback__agree {
+  color: #7a8184;
+  font-size: 12px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.feedback__agree input[type="checkbox"]:checked,
+.feedback__agree input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.feedback__agree input[type="checkbox"]:checked+label,
+.feedback__agree input[type="checkbox"]:not(:checked)+label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.feedback__agree input[type="checkbox"]:checked+label:before,
+.feedback__agree input[type="checkbox"]:not(:checked)+label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e2ceca;
+  box-sizing: border-box;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.feedback__agree input[type="checkbox"]:checked+label:after,
+.feedback__agree input[type="checkbox"]:not(:checked)+label:after {
+  content: "";
+  position: absolute;
+
+  left: 3px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  background: #8d4048;
+
+  transition: all 0.2s ease;
+}
+
+
+.feedback__agree input[type="checkbox"]:not(:checked)+label:after {
+  opacity: 0;
+}
+
+.feedback__agree input[type="checkbox"]:checked+label:after {
+  opacity: 1;
+}
+
+// ./feedback

@@ -5,6 +5,12 @@
   margin-bottom: 102px;
 
   min-height: 816px;
+
+  @media screen and (max-width: $width-lg) {
+    min-height: unset;
+    margin-top: 102px;
+    margin-bottom: 68px;
+  }
 }
 
 .imgtop__img {
@@ -28,6 +34,10 @@
 .imgtop--short {
   overflow-y: hidden;
   height: 609px;
+
+  @media screen and (max-width: $width-lg) {
+    height: 340px;
+  }
 }
 
 .imgtop__overlay {
@@ -58,6 +68,7 @@
   }
 
   @media screen and (max-width: $width-lg) {
+    padding: 145px 0 0;
     font-size: 32px;
   }
 }

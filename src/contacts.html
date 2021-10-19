@@ -1,0 +1,47 @@
+{% set title = "Контакты | Aspera" %}
+{% include "../templates/header.njk" %}
+<section class="contacts container">
+  <h1 class="title toptitle container">Контакты</h1>
+  <div class="contacts__wrapper">
+    <div class="contacts__address">
+      <p>
+        97375, г. Санкт-Петербург,<br>
+        ул. Маршала Новикова,<br>
+        д. 28, к. 2, литер А,<br>
+        эт./пом./ком. 3/10-Н, 11-Н/5
+      </p>
+      <div class="contacts__post">
+        <a class="contacts__link" href="tel:+74951345433">+7 (495) 134-54-33</a>
+        <a class="contacts__link" href="mailto:info@pkaspera.ru">info@pkaspera.ru</a>
+      </div>
+    </div>
+    <div class="contacts__map">
+      <div class="contacts__inner">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1185.858676918327!2d30.265060464358093!3d60.00896285920349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963439972a30a5%3A0x38e235fa580fa709!2z0YPQuy4g0JzQsNGA0YjQsNC70LAg0J3QvtCy0LjQutC-0LLQsCwgMjgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTczNzU!5e0!3m2!1sru!2sru!4v1634647039728!5m2!1sru!2sru"
+          width="1600" height="960" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="feedback">
+    <h2 class="feedback__title title">Напишите нам</h2>
+    <form class="feedback__form" action="#" method="post">
+      <label for="name"></label>
+      <input class="feedback__input" type="text" id="name" placeholder="Ваше имя">
+      <label for="phone"></label>
+      <input class="feedback__input" type="tel" id="phone" placeholder="Телефон">
+      <label for="mail"></label>
+      <input class="feedback__input" type="email" id="mail" placeholder="E-mail">
+      <textarea class="feedback__text" name="messag" cols="30" rows="5" placeholder="Сообщение"></textarea>
+      <div class="feedback__agree">
+        <input type="checkbox" name="agree" id="agree" value="1" checked required>
+        <label for="agree">Соглашаюсь с политикой конфиденциальности</label>
+      </div>
+      <button class="button" type="submit">отправить<span> &rarr;</span></button>
+    </form>
+  </div>
+</section>
+<div class="bground">
+  {% include "../templates/arrowup.njk" %}
+</div>
+{% include "../templates/footer.njk" %}
