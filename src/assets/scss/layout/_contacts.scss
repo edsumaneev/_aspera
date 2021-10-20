@@ -1,5 +1,9 @@
 .contacts {
   margin-bottom: 75px;
+
+  @media screen and (max-width: $width-lg) {
+    margin-bottom: 45px;
+  }
 }
 
 .contacts__wrapper {
@@ -8,21 +12,51 @@
   align-items: center;
 
   margin-bottom: 110px;
+
+  @media screen and (max-width: $width-lg) {
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
 }
 
 .contacts__address {
   margin-right: 160px;
   width: 25%;
+
+  @media screen and (max-width: $width-lg) {
+    margin-right: 0;
+    width: auto;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .contacts__map {
   position: relative;
   width: 75%;
   min-height: 960px;
+
+  @media screen and (max-width: $width-lg) {
+    width: 100%;
+    min-height: 500px;
+  }
 }
 
 .contacts__inner {
   position: absolute;
+
+  @media screen and (max-width: $width-lg) {
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .contacts__post {
@@ -45,6 +79,10 @@
 // .feedback
 .feedback__title {
   margin-bottom: 115px;
+
+  @media screen and (max-width: $width-lg) {
+    margin-bottom: 30px;
+  }
 }
 
 .feedback__form {
@@ -80,13 +118,24 @@
 .feedback ::placeholder {
   color: #977777;
   font-size: 18px;
+
+  @media screen and (max-width: $width-lg) {
+    font-size: 16px;
+  }
 }
 
 .feedback__agree {
+  margin: 0 auto;
+  margin-bottom: 25px;
   color: #7a8184;
   font-size: 12px;
   line-height: 28px;
   cursor: pointer;
+
+  @media screen and (max-width: $width-lg) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .feedback__agree input[type="checkbox"]:checked,
@@ -112,9 +161,9 @@
   top: 0px;
   width: 18px;
   height: 18px;
-  border: 1px solid #e2ceca;
-  box-sizing: border-box;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  // border: 1px solid #e2ceca;
+  // box-sizing: border-box;
+  // box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .feedback__agree input[type="checkbox"]:checked+label:after,
@@ -126,7 +175,8 @@
   top: 3px;
   width: 12px;
   height: 12px;
-  background: #8d4048;
+  // background: #8d4048;
+  background: url("../img/icons/icon-tick.svg") no-repeat 50% 50%;
 
   transition: all 0.2s ease;
 }

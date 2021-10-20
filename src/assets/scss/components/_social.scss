@@ -18,6 +18,10 @@
 
 .social--main {
   top: 307px;
+
+  @media screen and (max-width: $width-lg) {
+    top: unset;
+  }
 }
 
 .social__item {
@@ -34,6 +38,10 @@
 
 .social--main .social__item {
   margin-bottom: 116px;
+
+  @media screen and (max-width: $width-lg) {
+    margin-bottom: 20px;
+  }
 }
 
 .social__link {
