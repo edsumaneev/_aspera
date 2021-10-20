@@ -1,52 +1,78 @@
 {% set title = "О нас | Aspera" %}
 {% include "../templates/header.njk" %}
-
-<section class="something">
-  <div class="container">
-    <h1>Horizontal Timeline &rarr;</h1>
+<div class="imgtop">
+  <div class="imgtop__img">
+    <div class="imgtop__overlay"></div>
+    <img src="assets/img/bg/about-bg-01.png" alt="Aspera" width="1920" height="816">
+  </div>
+  <h1 class="title imgtop__title container">О компании</h1>
+  <p class="imgtop__subtitle">Все лучшее от природы</p>
+</div>
+<section class="pagerow">
+  <div class="pagerow__rel">
+    <div></div>
+    <img src="assets/img/bg/about-bg-02.png" alt="Aspera" width="960" height="960">
+    <div class="pagerow__dsc">
+      <p>Природа - неиссякаемый источник нашего вдохновения</p>
+    </div>
+  </div>
+  <div class="pagerow__container container">
+    <div>
+      <h2 class="title">Что мы предлагаем</h2>
+      <p>
+        Более 10 лет наша компания производит 100% натуральные эфирные и косметические масла. Мы используем только
+        высококачественное растительное сырье, которое соответствует высоким международным стандартам качества.
+      </p>
+      <a class="button" href="production.html">посмотреть производство <span> &rarr;</span></a>
+    </div>
   </div>
 </section>
-<section class="timeline">
 
-  <ol>
-    <li>
-      <span>2014</span>
+
+<section class="timeline">
+  <h2 class="timeline__title title">История</h2>
+  <ol class="timeline__list">
+    <li class="timeline__item">
+      <span></span>
       <div>
         открыты наши торговые представительства в 10 регионах России, Белоруссии и Казахстана
       </div>
     </li>
-    <li>
-      <span>2013</span>
+    <li class="timeline__item">
+      <span>2014</span>
       <div>
         продукция Аспера представлена более чем в 35000 аптеках России, Белоруссии и Казахстана
       </div>
     </li>
-    <li>
-      <span>2012</span>
+    <li class="timeline__item">
+      <span>2013</span>
       <div>
         Аспера член IFEAT - международной федерации по торговле эфирными маслами и ароматизаторами
       </div>
     </li>
-    <li>
+    <li class="timeline__item">
+      <span>2012</span>
+      <div>
+        Более чем из 30 стран мира мы осуществляем поставки сырья, изготовленного на предприятиях имеющих собственные
+        посевные площади и прошедших сертификацию по стандартам ISO
+      </div>
+    </li>
+    <li class="timeline__item">
       <span>2011</span>
       <div>
         Более чем из 30 стран мира мы осуществляем поставки сырья, изготовленного на предприятиях имеющих собственные
         посевные площади и прошедших сертификацию по стандартам ISO
       </div>
     </li>
-    <li>
+    <li class="timeline__item">
       <span>2010</span>
       <div>
         Более чем из 30 стран мира мы осуществляем поставки сырья, изготовленного на предприятиях имеющих собственные
         посевные площади и прошедших сертификацию по стандартам ISO
       </div>
     </li>
-    <li>
+    <li class="timeline__item">
       <span>2009</span>
-      <div>
-        Более чем из 30 стран мира мы осуществляем поставки сырья, изготовленного на предприятиях имеющих собственные
-        посевные площади и прошедших сертификацию по стандартам ISO
-      </div>
     </li>
   </ol>
 
@@ -58,7 +84,6 @@
       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_next.svg" alt="next timeline arrow">
     </button>
   </div>
-  <h2>T</h2>
 </section>
 
 {% include "../templates/footer.njk" %}

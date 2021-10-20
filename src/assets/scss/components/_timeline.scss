@@ -34,14 +34,16 @@
   padding-top: 80px;
 }
 
-.timeline ol {
+.timeline__list {
   font-size: 0;
   width: 100vw;
-  padding: 250px 0;
+  padding: 250px 0 250px 250px;
   transition: all 1s;
+
+  cursor: grab;
 }
 
-.timeline ol li {
+.timeline__item {
   position: relative;
   display: inline-block;
   // display: flex;
@@ -53,7 +55,7 @@
   background: $font-main;
 }
 
-.timeline ol li span {
+.timeline__item span {
   position: absolute;
 
   right: 107%;
@@ -66,15 +68,15 @@
   color: #3F3133;
 }
 
-.timeline ol li:last-child {
+.timeline__item:last-child {
   width: 280px;
 }
 
-.timeline ol li:not(:first-child) {
+.timeline__item:not(:first-child) {
   margin-left: 14px;
 }
 
-.timeline ol li:not(:last-child)::after {
+.timeline__item:not(:last-child)::after {
   // content: "";
   // position: absolute;
   // top: 50%;
@@ -98,19 +100,11 @@
   border: 1px solid #E2CECA;
 }
 
-.timeline ol li div {
-  // position: absolute;
-  // left: calc(100% + 7px);
-  // width: 280px;
-  // padding: 15px;
-  // font-size: 1rem;
-  // white-space: normal;
-  // color: black;
-  // background: white;
+.timeline__item div {
   position: absolute;
   // left: calc(100% + 7px);
-  left: calc(50% + 7px);
-  width: 280px;
+  left: calc(20% + 10px);
+  width: 509px;
   padding: 15px;
   font-size: 1rem;
   white-space: normal;
@@ -121,44 +115,48 @@
   height: auto;
 }
 
-.timeline ol li div::before {
+.timeline__item div::before {
   content: "";
   position: absolute;
   top: 100%;
-  left: 80px;
+  left: 190px;
   width: 0;
   height: 0;
   border-style: solid;
 }
 
-.timeline ol li:nth-child(odd) div {
+.timeline__item:nth-child(odd) div {
   top: -100px;
   transform: translateY(-100%);
 }
 
-.timeline ol li:nth-child(odd) div::before {
+.timeline__item:nth-child(odd) div::before {
   top: 100%;
   border-width: 60px 60px 0 60px;
   border-color: #e2ceca transparent transparent transparent;
 }
 
-.timeline ol li:nth-child(even) div {
-  top: calc(100% + 16px);
+.timeline__item:nth-child(even) div {
+  top: calc(100% + 90px);
 }
 
-.timeline ol li:nth-child(even) div::before {
+.timeline__item:nth-child(even) div::before {
   top: -8px;
   border-width: 8px 0 0 8px;
   border-color: transparent transparent transparent #e2ceca;
 }
 
-.timeline time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
+// .timeline time {
+//   display: block;
+//   font-size: 1.2rem;
+//   font-weight: bold;
+//   margin-bottom: 8px;
+// }
 
+
+.timeline__title {
+  margin-bottom: 83px;
+}
 
 /* TIMELINE ARROWS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

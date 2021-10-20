@@ -1,0 +1,16 @@
+.pagerow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 89px;
+}
+
+.pagerow__container {
+  display: flex;
+  padding: 203px 289px 240px 148px;
+}
+
+.pagerow__rel {
+  position: relative;
+  min-width: 960px;
+  min-height: 960px;
+}

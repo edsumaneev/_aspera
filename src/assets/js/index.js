@@ -112,14 +112,14 @@ jQuery(function ($) {
 // timeline https://codepen.io/tutsplus/pen/ZKpNwm
 (function () {
   // VARIABLES
-  const timeline = document.querySelector(".timeline ol"),
-    elH = document.querySelectorAll(".timeline li > div"),
+  const timeline = document.querySelector(".timeline__list"),
+    elH = document.querySelectorAll(".timeline__item > div"),
     arrows = document.querySelectorAll(".timeline .arrows .arrow"),
     arrowPrev = document.querySelector(".timeline .arrows .arrow__prev"),
     arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
-    firstItem = document.querySelector(".timeline li:first-child"),
-    lastItem = document.querySelector(".timeline li:last-child"),
-    xScrolling = 280,
+    firstItem = document.querySelector(".timeline__item:first-child"),
+    lastItem = document.querySelector(".timeline__item:last-child"),
+    xScrolling = 380,
     disabledClass = "disabled";
 
   // START
