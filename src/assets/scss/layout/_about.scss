@@ -1,16 +1,39 @@
-.pagerow {
+.advantages__list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 89px;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.pagerow__container {
-  display: flex;
-  padding: 203px 289px 240px 148px;
+.advantages__item {
+  max-width: 380px;
 }
 
-.pagerow__rel {
-  position: relative;
-  min-width: 960px;
-  min-height: 960px;
+.advantages__img {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.advantages__title {
+  margin-bottom: 32px;
+}
+
+.advantages__subtitle {
+  margin-bottom: 26px;
+
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 150%;
+
+  color: #8d4048;
+}
+
+.bg-img {
+  z-index: 0;
+  overflow: hidden;
+
+  img {
+    max-width: unset;
+    width: 100%;
+  }
 }
