@@ -118,7 +118,7 @@ if ($(".timeline").length > 0) {
       arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
       firstItem = document.querySelector(".timeline__item:first-child"),
       lastItem = document.querySelector(".timeline__item:last-child"),
-      xScrolling = 600,
+      xScrolling = 376,
       disabledClass = "disabled";
 
     // START

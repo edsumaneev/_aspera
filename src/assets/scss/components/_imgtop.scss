@@ -8,7 +8,7 @@
   @media screen and (max-width: $width-lg) {
     min-height: unset;
     margin-top: 102px;
-    // margin-bottom: 68px;
+    height: 508px;
   }
 }
 
@@ -40,6 +40,10 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+
+    @media screen and (max-width: $width-xl) {
+      height: 100%;
+    }
   }
 }
 
@@ -68,7 +72,7 @@
 
   right: 0;
   left: 0;
-  padding: 250px 150px 0;
+  padding: 316px 150px 0;
 
   color: #ffffff;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
@@ -90,7 +94,7 @@
 .imgtop__subtitle {
   z-index: 3;
   position: absolute;
-  top: 360px;
+  top: 426px;
   right: 0;
   left: 0;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
@@ -100,4 +104,14 @@
   text-align: center;
 
   color: #ffffff;
+
+  @media screen and (max-width: $break-1720) {
+    font-size: 28px;
+    top: 375px;
+  }
+
+  @media screen and (max-width: $width-lg) {
+    font-size: 20px;
+    top: 195px;
+  }
 }
