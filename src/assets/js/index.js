@@ -106,7 +106,18 @@ jQuery(function ($) {
     }
   });
 });
-
+// video
+$('.video__video').parent().click(function () {
+  if ($(this).children(".video__video").get(0).paused) {
+    $(this).children(".video__video").get(0).play();
+    $(this).children(".video__playpause").fadeOut();
+    $(this).children(".video__title").addClass("deactivate");
+  } else {
+    $(this).children(".video__video").get(0).pause();
+    $(this).children(".video__playpause").fadeIn();
+    $(this).children(".video__title").removeClass("deactivate");
+  }
+});
 // timeline https://codepen.io/tutsplus/pen/ZKpNwm
 if ($(".timeline").length > 0) {
   (function () {
