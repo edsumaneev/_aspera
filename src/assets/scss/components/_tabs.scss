@@ -1,0 +1,126 @@
+.tabs-box {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+ul.tabs {
+  width: 100%;
+  min-height: 70px;
+
+  border-bottom: 1px solid #e2ceca;
+}
+
+ul.tabs li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 21px 58px 7px;
+
+
+  line-height: 42px;
+  color: #977777;
+  overflow: hidden;
+  cursor: pointer;
+  // font-size: 16px
+}
+
+ul.tabs li:hover {
+  color: #3f3133;
+}
+
+ul.tabs li.active {
+  display: block;
+  color: #3f3133;
+
+  background: #ffffff;
+  border-top: 1px solid #e2ceca;
+  border-left: 1px solid #e2ceca;
+  border-right: 1px solid #e2ceca;
+}
+
+.tab_container {
+  width: 100%;
+  overflow: auto;
+}
+
+.tab_content {
+  padding: 20px;
+  display: none;
+}
+
+.tab_content p {
+  margin-bottom: 10px
+}
+
+.tab_content img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tab_accordion {
+  display: none;
+}
+
+@media screen and (max-width: $width-lg) {
+
+  .tabs {
+    display: none;
+  }
+
+  .tabs-box {
+    width: 100%;
+  }
+
+  .tab_accordion {
+    position: relative;
+    display: block;
+    padding: 20px 50px 22px;
+    margin: 0 0 15px 0;
+
+    // font-weight: 400;
+    // font-size: 16px;
+    color: #977777;
+    border: 1px solid #e2ceca;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* панели аккордеона при наведении */
+  // .tab_accordion:hover {
+  //   background-color: #009688;
+  // }
+
+  /* переключатель вкладок, положение вниз */
+  .tab_accordion:before {
+    content: '|';
+    height: 8px;
+    width: 8px;
+    display: block;
+    color: #3f3133;
+    // border: 2px solid #fefefe;
+    // border-right-width: 0;
+    // border-top-width: 0;
+    // transform: rotate(-45deg);
+    position: absolute;
+    right: 20px;
+    top: 18px
+  }
+
+  /* состояние активных панелей */
+  // .d_active {
+  //   background-color: #008477;
+  //   color: #fff;
+  // }
+
+  /* активный переключатель, положение вверх */
+  //   .d_active.tab_accordion:before {
+  //     border: 2px solid #fefefe;
+  //     border-left-width: 0;
+  //     border-bottom-width: 0;
+  //     top: 18px
+  //   }
+}

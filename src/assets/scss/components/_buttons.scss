@@ -24,6 +24,16 @@
   }
 }
 
+.button--red {
+  margin-top: 0;
+  color: #ffffff;
+  background: #8d4048;
+}
+
+.button--red:hover {
+  background: transparent;
+}
+
 .button:hover {
   color: #8d4048;
   border-color: #8d4048;

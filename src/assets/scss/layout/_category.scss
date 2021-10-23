@@ -1,0 +1,21 @@
+// .category
+.category {
+  display: flex;
+  justify-content: space-between;
+}
+
+// ./category
+// .sidebar
+.sidebar {
+  padding: 36px 43px 62px 30px;
+  background: #fcf8f8;
+}
+
+.sidebar__title {
+  color: #3f3133;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 38px;
+}
+
+// ./sidebar

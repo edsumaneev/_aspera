@@ -118,6 +118,72 @@ $('.video__video').parent().click(function () {
     $(this).children(".video__title").removeClass("deactivate");
   }
 });
+// counter
+if ($('.counter').length > 0) {
+  $(document).ready(function () {
+    $('body').on('click', '.counter__minus, .counter__plus', function () {
+      var $row = $(this).closest('.counter');
+      var $input = $row.find('.counter__text');
+      var step = $row.data('step');
+      var val = parseFloat($input.val());
+      if ($(this).hasClass('counter__minus')) {
+        val -= step;
+      } else {
+        val += step;
+      }
+      $input.val(val);
+      $input.change();
+      return false;
+    });
+    $('body').on('change', '.counter__text', function () {
+      var $input = $(this);
+      var $row = $input.closest('.counter');
+      var step = $row.data('step');
+      var min = parseInt($row.data('min'));
+      var max = parseInt($row.data('max'));
+      var val = parseFloat($input.val());
+      if (isNaN(val)) {
+        val = step;
+      } else if (min && val < min) {
+        val = min;
+      } else if (max && val > max) {
+        val = max;
+      }
+      $input.val(val);
+    });
+  });
+};
+// END counter
+// tabs
+// вкладки с содержанием
+
+$(".tab_content").hide();
+$(".tab_content:first").show();
+/* в режиме вкладок */
+$("ul.tabs li").click(function () {
+  $(".tab_content").hide();
+  var activeTab = $(this).attr("rel");
+  $("#" + activeTab).fadeIn();
+  $("ul.tabs li").removeClass("active");
+  $(this).addClass("active");
+  $(".tab_accordion").removeClass("d_active");
+  $(".tab_accordion[rel^='" + activeTab + "']").addClass("d_active");
+});
+/* в режиме аккордеона */
+$(".tab_accordion").click(function () {
+  $(".tab_content").hide();
+  var d_activeTab = $(this).attr("rel");
+  $("#" + d_activeTab).fadeIn();
+  $(".tab_accordion").removeClass("d_active");
+  $(this).addClass("d_active");
+  $("ul.tabs li").removeClass("active");
+  $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
+});
+/* дополнительный класс tab_last, 
+чтобы добавить границу к правой 
+стороне последней вкладки. */
+$('ul.tabs li').last().addClass("tab_last");
+// END tabs
 // timeline https://codepen.io/tutsplus/pen/ZKpNwm
 if ($(".timeline").length > 0) {
   (function () {

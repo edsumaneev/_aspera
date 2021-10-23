@@ -1,0 +1,95 @@
+{% set title = "Категория | Aspera" %}
+{% include "../templates/header.njk" %}
+<section class="samples samples--paddheight">
+  <div class="samples__item">
+    <div class="samples__bg">
+      <img src="assets/img/bg/img-prod-00.png" alt="Aspera" width="1189" height="960">
+    </div>
+    <div class="samples__dsc samples__dsc--noafter">
+      <div class="samples__pic samples__pic--top">
+        <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="658" height="799">
+      </div>
+      <div class="samples__col samples__col--padding">
+        <span class="samples__mark">новинка</span>
+        <h3 class="samples__type">эфирное масло</h3>
+        <h2 class="title samples__title samples__title--margin">Грейпфрут</h2>
+        <div class="samples__inner">
+          <p class="samples__price samples__price--margin">5 200 <span>₽</span></p>
+          <div class="samples__text samples__text--margin">
+            <p>
+              Помогает достичь желаемого, побуждает веру и решительность, оптимизм и трудолюбие, целеустремленность и
+              лидерство. Способствует раскрепощенности и усилению полового влечения.
+            </p>
+          </div>
+        </div>
+        <div class="samples__row">
+          <div class="counter" data-step="1" data-min="1" data-max="100">
+            <input class="counter__text" type="text" name="count" value="1">
+            <a href="#" class="counter__minus">−</a>
+            <a href="#" class="counter__plus">+</a>
+          </div>
+          <a class="button button--red" href="#">заказать и забрать <span> &rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="product container">
+  <div class="tabs-box">
+    <ul class="tabs">
+      <li class="active" rel="tab1">Описание</li>
+      <li rel="tab2">Действие</li>
+      <li rel="tab3" class="tab_last">Применение</li>
+    </ul>
+    <div class="tab_container">
+      <h3 class="d_active tab_accordion" rel="tab1">Описание</h3>
+      <div id="tab1" class="tab_content" style="display: block;">
+        <p>
+          Грейпфрут – это плодовое дерево, достигающее высоты 15м семейства цитрусовые с серовато-коричневой гладкой
+          корой и небольшими колючками. Плоды крупные, круглые, со светло-жёлтой кожурой и своеобразным запахом. Мякоть
+          плодов жёлтая или зеленовато-жёлтая, сочная, ароматная, горьковато-сладкая. Цветёт в мае. Плодоносит в
+          декабре. Разводится в субтропических районах – в США, Южной Европе, Азии, на Филиппинах, на черноморском
+          побережье Грузии. Кожура плодов грейпфрута содержит эфирное масло, в состав которого входят органические
+          соединения: лимонен, линеен, цитрал, гераниол. Эфирное масло легкое, текучее, желтоватого цвета. Аромат
+          нежной, холодной, горьковатой свежести.
+        </p>
+      </div>
+      <h3 class="tab_accordion" rel="tab2">Действие</h3>
+      <div id="tab2" class="tab_content" style="display: none;">
+        <p>
+          Лечебно-профилактические свойства
+          Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. Нормализует жировой обмен, способствует
+          выведению шлаков и снижению веса.
+          Косметические свойства
+          Используется для ухода за жирной пористой кожей, при угревой сыпи. Облададет антицеллютным действием.
+          Предупреждает появление растяжек кожи (стрий). Препятствует образованию камедонов (закрытых угрей).
+          Разглаживает морщины. Улучшает цвет кожи. Используется для ухода за жирными волосами.
+          Эмоциональное воздействие
+          Помогает объективно воспринимать жизнь и легко усваивать новый поток информации. Укрепляет нервную систему.
+          Снимает чувство страха, раздражение.
+          Дополнительные свойства
+          1. Снижает аппетит.
+          2. Является натуральным дезодорантом
+        </p>
+      </div>
+      <h3 class="tab_accordion" rel="tab3">Применение</h3>
+      <div id="tab3" class="tab_content" style="display: none;">
+        <h2>Содержимое Вкладки 3</h2>
+        <p><img src="http://lorempixel.com/250/200" class="img-right">
+          <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
+            превратился в страшное насекомое.
+            <p>Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый,
+              разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот
+              окончательно сползти одеяло
+            </p>
+      </div>
+    </div>
+  </div>
+  <div class="product__bg">
+    <img src="assets/img/bg/bg-product-01.png" alt="Aspera" width="1037" height="904">
+  </div>
+</section>
+<div class="bground">
+  {% include "../templates/arrowup.njk" %}
+</div>
+{% include "../templates/footer.njk" %}

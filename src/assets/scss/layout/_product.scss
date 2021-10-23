@@ -1,0 +1,12 @@
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__bg {
+  width: 50%;
+
+  @media screen and (max-width: $width-lg) {
+    display: none;
+  }
+}
