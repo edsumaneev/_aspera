@@ -2,6 +2,10 @@ require('bootstrap');
 require('slick-carousel');
 require('hammerjs');
 
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});
+
 // hamburger
 $('.hamburger').on('click', function (event) {
   event.preventDefault();
@@ -157,32 +161,32 @@ if ($('.counter').length > 0) {
 // tabs
 // вкладки с содержанием
 
-$(".tab_content").hide();
-$(".tab_content:first").show();
+$(".tabs__content").hide();
+$(".tabs__content:first").show();
 /* в режиме вкладок */
-$("ul.tabs li").click(function () {
-  $(".tab_content").hide();
+$(".tabs__header").click(function () {
+  $(".tabs__content").hide();
   var activeTab = $(this).attr("rel");
   $("#" + activeTab).fadeIn();
-  $("ul.tabs li").removeClass("active");
+  $(".tabs__header").removeClass("active");
   $(this).addClass("active");
-  $(".tab_accordion").removeClass("d_active");
-  $(".tab_accordion[rel^='" + activeTab + "']").addClass("d_active");
+  $(".tabs__accordion").removeClass("d_active");
+  $(".tabs__accordion[rel^='" + activeTab + "']").addClass("d_active");
 });
 /* в режиме аккордеона */
-$(".tab_accordion").click(function () {
-  $(".tab_content").hide();
+$(".tabs__accordion").click(function () {
+  $(".tabs__content").hide();
   var d_activeTab = $(this).attr("rel");
   $("#" + d_activeTab).fadeIn();
-  $(".tab_accordion").removeClass("d_active");
+  $(".tabs__accordion").removeClass("d_active");
   $(this).addClass("d_active");
-  $("ul.tabs li").removeClass("active");
-  $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
+  $(".tabs__header").removeClass("active");
+  $(".tabs__header[rel^='" + d_activeTab + "']").addClass("active");
 });
 /* дополнительный класс tab_last, 
 чтобы добавить границу к правой 
 стороне последней вкладки. */
-$('ul.tabs li').last().addClass("tab_last");
+// $('ul.tabs__list li').last().addClass("tab_last");
 // END tabs
 // timeline https://codepen.io/tutsplus/pen/ZKpNwm
 if ($(".timeline").length > 0) {

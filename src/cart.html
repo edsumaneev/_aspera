@@ -1,0 +1,179 @@
+{% set title = "Корзина | Aspera" %}
+{% include "../templates/header.njk" %}
+<h1 class="title toptitle container">Корзина</h1>
+<section class="container">
+  <form class="cart" action="#" method="post">
+    <table>
+      <tr>
+        <td rowspan="3"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <table class="cart__table" style="border-collapse: collapse; border: 3px solid purple;">
+      <thead>
+        <tr class="cart__head">
+          <!-- <th class="cart__caption cart__noheight">&nbsp;</th> -->
+          <th class="cart__caption">Фото</th>
+          <th class="cart__caption">Наименование</th>
+          <th class="cart__caption">Цена</th>
+          <th class="cart__caption">Количество</th>
+          <th class="cart__caption">Сумма</th>
+          <th class="cart__caption">&nbsp;</th>
+          <th class="cart__caption">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <td class="cart__noheight">&nbsp;</td> -->
+          <td class="cart__img">
+            <a href="product.html">
+              <img width="184" height="184" src="assets/img/bg/cart-img-01.png" alt="Aspera" />
+            </a>
+          </td>
+          <td class="cart__name" data-title="Name">
+            <!-- <a href="#">Набор «Оранжевое настроение»</a> -->
+            Набор «Оранжевое настроение»
+          </td>
+
+          <td class="cart__price" data-title="Price">
+            2 700 руб.
+          </td>
+
+          <td class="productcard productcard__quantity productcard__quantity--noborder" data-title="Quantity">
+            <div class="productcard__counter productcard__counter--cart">
+              <span class="productcard__decrease productcard__decrease--cart"></span>
+              <input type="text" value="1 шт." />
+              <span class="productcard__increase productcard__increase--cart"></span>
+            </div>
+          </td>
+
+          <td class="cart__subtotal" data-title="Total">
+            5 400 руб.
+          </td>
+
+          <td>
+            <a href="#" class="cart__remove" aria-label="Remove this item">
+              <span>
+                <svg width="1.25em" height="1.55em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                  <path fill-rule="evenodd"
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                </svg>
+              </span>
+            </a>
+          </td>
+          <td class="cart__noheight">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <!-- <td class="cart__noheight">&nbsp;</td> -->
+
+          <td class="cart__img">
+            <a href="productpage.html">
+              <img width="130" height="130" src="assets/img/products/img-product01@1x.webp" alt="Фото товара" />
+            </a>
+          </td>
+
+          <td class="cart__name" data-title="Name">
+            <!-- <a href="#">Набор «Оранжевое настроение»</a> -->
+            Набор «Оранжевое настроение»
+          </td>
+
+          <td class="cart__price" data-title="Price">
+            2 700 руб.
+          </td>
+
+          <td class="productcard productcard__quantity productcard__quantity--noborder" data-title="Quantity">
+            <div class="productcard__counter productcard__counter--cart">
+              <span class="productcard__decrease productcard__decrease--cart"></span>
+              <input type="text" value="1 шт." />
+              <span class="productcard__increase productcard__increase--cart"></span>
+            </div>
+          </td>
+
+          <td class="cart__subtotal" data-title="Total">
+            5 400 руб.
+          </td>
+
+          <td>
+            <a href="#" class="cart__remove" aria-label="Remove this item">
+              <span>
+                <svg width="1.25em" height="1.55em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                  <path fill-rule="evenodd"
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                </svg>
+              </span>
+            </a>
+          </td>
+          <td class="cart__noheight">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <!-- <td class="cart__noheight">&nbsp;</td> -->
+
+          <td class="cart__img">
+            <a href="productpage.html">
+              <img width="130" height="130" src="assets/img/products/img-product01@1x.webp" alt="Фото товара" />
+            </a>
+          </td>
+
+          <td class="cart__name" data-title="Name">
+            <!-- <a href="#">Набор «Оранжевое настроение»</a> -->
+            Набор «Оранжевое настроение»
+          </td>
+
+          <td class="cart__price" data-title="Price">
+            2 700 руб.
+          </td>
+
+          <td class="productcard productcard__quantity productcard__quantity--noborder" data-title="Quantity">
+            <div class="productcard__counter productcard__counter--cart">
+              <span class="productcard__decrease productcard__decrease--cart"></span>
+              <input type="text" value="1 шт." />
+              <span class="productcard__increase productcard__increase--cart"></span>
+            </div>
+          </td>
+
+          <td class="cart__subtotal" data-title="Total">
+            5 400 руб.
+          </td>
+
+          <td>
+            <a href="#" class="cart__remove" aria-label="Remove this item">
+              <span>
+                <svg width="1.25em" height="1.55em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                  <path fill-rule="evenodd"
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                </svg>
+              </span>
+            </a>
+          </td>
+          <td class="cart__noheight">&nbsp;</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </form>
+</section>
+<div class="bground">
+  {% include "../templates/arrowup.njk" %}
+</div>
+{% include "../templates/footer.njk" %}

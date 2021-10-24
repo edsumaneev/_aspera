@@ -6,6 +6,7 @@
       <img src="assets/img/bg/img-prod-00.png" alt="Aspera" width="1189" height="960">
     </div>
     <div class="samples__dsc samples__dsc--noafter">
+      <span class="samples__code">код: ABC123</span>
       <div class="samples__pic samples__pic--top">
         <img src="assets/img/bg/img-prod-01.png" alt="Aspera" width="658" height="799">
       </div>
@@ -35,16 +36,16 @@
   </div>
 </section>
 <section class="product container">
-  <div class="tabs-box">
-    <ul class="tabs">
-      <li class="active" rel="tab1">Описание</li>
-      <li rel="tab2">Действие</li>
-      <li rel="tab3" class="tab_last">Применение</li>
+  <div class="tabs product__wrapper">
+    <ul class="tabs__list">
+      <li class="tabs__header active" rel="tab1">Описание</li>
+      <li class="tabs__header" rel="tab2">Действие</li>
+      <li class="tabs__header tab_last" rel="tab3">Применение</li>
     </ul>
-    <div class="tab_container">
-      <h3 class="d_active tab_accordion" rel="tab1">Описание</h3>
-      <div id="tab1" class="tab_content" style="display: block;">
-        <p>
+    <div class="tabs__container">
+      <h3 class="d_active tabs__accordion" rel="tab1">Описание</h3>
+      <div id="tab1" class="tabs__content" style="display: block;">
+        <p class="tabs__paragraph">
           Грейпфрут – это плодовое дерево, достигающее высоты 15м семейства цитрусовые с серовато-коричневой гладкой
           корой и небольшими колючками. Плоды крупные, круглые, со светло-жёлтой кожурой и своеобразным запахом. Мякоть
           плодов жёлтая или зеленовато-жёлтая, сочная, ароматная, горьковато-сладкая. Цветёт в мае. Плодоносит в
@@ -53,35 +54,129 @@
           соединения: лимонен, линеен, цитрал, гераниол. Эфирное масло легкое, текучее, желтоватого цвета. Аромат
           нежной, холодной, горьковатой свежести.
         </p>
-      </div>
-      <h3 class="tab_accordion" rel="tab2">Действие</h3>
-      <div id="tab2" class="tab_content" style="display: none;">
-        <p>
-          Лечебно-профилактические свойства
-          Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. Нормализует жировой обмен, способствует
-          выведению шлаков и снижению веса.
-          Косметические свойства
-          Используется для ухода за жирной пористой кожей, при угревой сыпи. Облададет антицеллютным действием.
-          Предупреждает появление растяжек кожи (стрий). Препятствует образованию камедонов (закрытых угрей).
-          Разглаживает морщины. Улучшает цвет кожи. Используется для ухода за жирными волосами.
-          Эмоциональное воздействие
-          Помогает объективно воспринимать жизнь и легко усваивать новый поток информации. Укрепляет нервную систему.
-          Снимает чувство страха, раздражение.
-          Дополнительные свойства
-          1. Снижает аппетит.
-          2. Является натуральным дезодорантом
-        </p>
-      </div>
-      <h3 class="tab_accordion" rel="tab3">Применение</h3>
-      <div id="tab3" class="tab_content" style="display: none;">
-        <h2>Содержимое Вкладки 3</h2>
-        <p><img src="http://lorempixel.com/250/200" class="img-right">
-          <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
-            превратился в страшное насекомое.
-            <p>Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый,
-              разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот
-              окончательно сползти одеяло
+        <ul class="product__list">
+          <li class="product__item">
+            <h3 class="product__subtitle">Состав</h3>
+            <p>
+              Грейпфрута эфирное масло 100%. Получено методом паровой пресования из кожуры плодов.
             </p>
+          </li>
+          <li class="product__item">
+            <h3 class="product__subtitle">Хранение</h3>
+            <p>
+              Хранить в плотно закрытых флаконах при t от +15ºдо +25ºС, в недопустимом для детей месте.
+            </p>
+          </li>
+          <li class="product__item">
+            <h3 class="product__subtitle">Форма выпуска</h3>
+            <p>
+              10 мл во флаконах из темного стекла.
+            </p>
+          </li>
+          <li class="product__item">
+            <h3 class="product__subtitle">Срок годности</h3>
+            <p>
+              3 года.
+            </p>
+          </li>
+        </ul>
+        <div>
+          <h4 class="product__warning">Противопоказания:</h4>
+          <p class="product__note">
+            Индивидуальная непереносимость масла. Не применять людям с аллергическими заболеваниями и бронхиальной
+            астмой.<br>Не применять во время беременности и детям до трех лет.
+          </p>
+        </div>
+      </div>
+      <h3 class="tabs__accordion" rel="tab2">Действие</h3>
+      <div id="tab2" class="tabs__content" style="display: none;">
+        <ul class="product__list">
+          <li class="product__item product__item--width">
+            <h3 class="product__subtitle">Лечебно-профилактические свойства</h3>
+            <p>
+              Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. Нормализует жировой обмен, способствует
+              выведению шлаков и снижению веса.
+            </p>
+          </li>
+          <li class="product__item product__item--width">
+            <h3 class="product__subtitle">Косметические свойства</h3>
+            <p>
+              Используется для ухода за жирной пористой кожей, при угревой сыпи. Облададет антицеллютным действием.
+              Предупреждает появление растяжек кожи (стрий). Препятствует образованию камедонов (закрытых угрей).
+              Разглаживает морщины. Улучшает цвет кожи. Используется для ухода за жирными волосами.
+            </p>
+          </li>
+          <li class="product__item product__item--width">
+            <h3 class="product__subtitle">Эмоциональное воздействие</h3>
+            <p>
+              Помогает объективно воспринимать жизнь и легко усваивать новый поток информации. Укрепляет нервную
+              систему.
+              Снимает чувство страха, раздражение.
+            </p>
+          </li>
+          <li class="product__item product__item--width">
+            <h3 class="product__subtitle">Дополнительные свойства</h3>
+            <p>
+              1. Снижает аппетит.<br>
+              2. Является натуральным дезодорантом
+            </p>
+          </li>
+        </ul>
+      </div>
+      <h3 class="tabs__accordion" rel="tab3">Применение</h3>
+      <div id="tab3" class="tabs__content" style="display: none;">
+        <ul class="product__list">
+          <li class="product__item">
+            <a class="product__popover" data-toggle="popover" tabindex="0" data-trigger="focus"
+              title="Холодные ингаляции" data-bs-content="Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. 
+              Нормализует жировой обмен, способствует выведению шлаков и снижению веса.">
+              <img src="assets/img/bg/img-product-01.png" alt="Aspera" width="190" height="190">
+              <h3 class="product__subtitle">Холодные ингаляции</h3>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__popover" data-toggle="popover" title="Холодные ингаляции" data-bs-content="Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. 
+            Нормализует жировой обмен, способствует выведению шлаков и снижению веса.">
+              <img src="assets/img/bg/img-product-02.png" alt="Aspera" width="190" height="190">
+              <h3 class="product__subtitle">Массаж</h3>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__popover" data-toggle="popover" title="Холодные ингаляции" data-bs-content="Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. 
+            Нормализует жировой обмен, способствует выведению шлаков и снижению веса.">
+              <img src="assets/img/bg/img-product-03.png" alt="Aspera" width="190" height="190">
+              <h3 class="product__subtitle">Ароматизация воздуха</h3>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__popover" data-toggle="popover" title="Холодные ингаляции" data-bs-content="Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. 
+            Нормализует жировой обмен, способствует выведению шлаков и снижению веса.">
+              <img src="assets/img/bg/img-product-04.png" alt="Aspera" width="190" height="190">
+              <h3 class="product__subtitle">Ароматическая ванна</h3>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__popover" data-toggle="popover" title="Холодные ингаляции" data-bs-content="Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. 
+            Нормализует жировой обмен, способствует выведению шлаков и снижению веса.">
+              <img src="assets/img/bg/img-product-05.png" alt="Aspera" width="190" height="190">
+              <h3 class="product__subtitle">Компресс</h3>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__popover" data-toggle="popover" title="Холодные ингаляции" data-bs-content="Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. 
+            Нормализует жировой обмен, способствует выведению шлаков и снижению веса.">
+              <img src="assets/img/bg/img-product-06.png" alt="Aspera" width="190" height="190">
+              <h3 class="product__subtitle">Масляные смеси для косметических процедур</h3>
+            </a>
+          </li>
+          <li class="product__item">
+            <a class="product__popover" data-toggle="popover" title="Холодные ингаляции" data-bs-content="Повышает иммунитет. Применяется для профилактики гриппа и ОРВИ. 
+            Нормализует жировой обмен, способствует выведению шлаков и снижению веса.">
+              <img src="assets/img/bg/img-product-07.png" alt="Aspera" width="190" height="190">
+              <h3 class="product__subtitle">Уход за волосами</h3>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
