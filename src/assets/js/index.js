@@ -4,7 +4,17 @@ require('hammerjs');
 
 $(function () {
   $('[data-toggle="popover"]').popover();
+  console.log('popover');
 });
+
+$(document).click(function (e) {
+  if (!$(e.target).is('[data-toggle="popover"]')) {
+    $('[data-toggle="popover"]').popover('hide');
+    console.log('yes');
+  }
+});
+
+
 
 // hamburger
 $('.hamburger').on('click', function (event) {
