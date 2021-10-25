@@ -1,0 +1,173 @@
+.cart {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $break-1350) {
+    flex-direction: column-reverse;
+  }
+}
+
+.cart__table {
+  width: 100%;
+}
+
+.cart .samples {
+  margin-bottom: 0;
+  width: 55%;
+
+  background: unset;
+
+  @media screen and (max-width: $break-1350) {
+    width: 100%;
+  }
+}
+
+.cart__cell {
+  // position: relative;
+  padding: 30px 0 30px 30px;
+
+  height: 100%;
+  vertical-align: top;
+}
+
+.cart__cell--padding {
+  padding: 20px 5px;
+}
+
+.cart__cell--width {
+  max-width: 130px;
+}
+
+.cart__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cart__wrapper--right {
+  align-items: flex-end;
+}
+
+.cart .samples__type {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cart .samples__price {
+  margin-top: 57px;
+  margin-bottom: 20px;
+}
+
+.cart .counter {
+  margin: 0;
+}
+
+.cart__link {
+  width: 100%;
+  height: 100%;
+}
+
+.cart__title {
+  margin-bottom: 20px;
+  font-weight: 200;
+  font-size: 32px;
+  text-align: left;
+}
+
+.cart__trashbin svg {
+  width: 25px;
+  height: 25px;
+  fill: #3f3133;
+  cursor: pointer;
+}
+
+.cart__trashbin svg:hover {
+  fill: #8d4048;
+  transition: ease-in-out 0.3s;
+}
+
+.cart__trashbin {
+  @media screen and (max-width: $width-sm) {
+    position: absolute;
+    bottom: 620px;
+    right: 20px;
+  }
+}
+
+.cart__row {
+  position: relative;
+  border: 1px solid #e2ceca;
+
+  @media screen and (max-width: $width-sm) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.separator {
+  height: 20px;
+}
+
+// .form-cart
+.form-cart {
+  align-self: baseline;
+  padding: 26px 30px 37px 30px;
+  width: 44%;
+
+  background: #fcf8f8;
+  border: 1px solid #e2ceca;
+
+  @media screen and (max-width: $break-1350) {
+    width: 100%;
+  }
+}
+
+// .form-cart__row {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+.form-cart {
+  text-align: center;
+
+  @media screen and (max-width: $break-1350) {
+    margin-bottom: 35px;
+  }
+}
+
+.form-cart__button {
+  margin-top: 33px;
+}
+
+.form-cart__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form-cart__title {
+  text-align: left;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 150%;
+
+  color: #8d4048;
+}
+
+.form-cart__text {
+  font-size: 36px;
+  line-height: 49px;
+  max-width: 115px;
+
+  color: #3f3133;
+  text-align: right;
+  background: transparent;
+  border: none;
+
+  span {
+    font-size: 24px;
+  }
+}

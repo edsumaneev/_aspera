@@ -2,176 +2,192 @@
 {% include "../templates/header.njk" %}
 <h1 class="title toptitle container">Корзина</h1>
 <section class="container">
-  <form class="cart" action="#" method="post">
-    <table>
-      <tr>
-        <td rowspan="3"></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-
-    <table class="cart__table" style="border-collapse: collapse; border: 3px solid purple;">
-      <thead>
-        <tr class="cart__head">
-          <!-- <th class="cart__caption cart__noheight">&nbsp;</th> -->
-          <th class="cart__caption">Фото</th>
-          <th class="cart__caption">Наименование</th>
-          <th class="cart__caption">Цена</th>
-          <th class="cart__caption">Количество</th>
-          <th class="cart__caption">Сумма</th>
-          <th class="cart__caption">&nbsp;</th>
-          <th class="cart__caption">&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <!-- <td class="cart__noheight">&nbsp;</td> -->
-          <td class="cart__img">
-            <a href="product.html">
-              <img width="184" height="184" src="assets/img/bg/cart-img-01.png" alt="Aspera" />
-            </a>
-          </td>
-          <td class="cart__name" data-title="Name">
-            <!-- <a href="#">Набор «Оранжевое настроение»</a> -->
-            Набор «Оранжевое настроение»
-          </td>
-
-          <td class="cart__price" data-title="Price">
-            2 700 руб.
-          </td>
-
-          <td class="productcard productcard__quantity productcard__quantity--noborder" data-title="Quantity">
-            <div class="productcard__counter productcard__counter--cart">
-              <span class="productcard__decrease productcard__decrease--cart"></span>
-              <input type="text" value="1 шт." />
-              <span class="productcard__increase productcard__increase--cart"></span>
-            </div>
-          </td>
-
-          <td class="cart__subtotal" data-title="Total">
-            5 400 руб.
-          </td>
-
-          <td>
-            <a href="#" class="cart__remove" aria-label="Remove this item">
-              <span>
-                <svg width="1.25em" height="1.55em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg">
+  <div class="cart">
+    <div class="samples table-responsive">
+      <table class="cart__table">
+        <tbody>
+          <tr class="cart__row">
+            <td class="cart__cell cart__cell--width">
+              <div class="cart__img">
+                <a class="cart__link" href="product.html">
+                  <img width="184" height="184" src="assets/img/bg/cart-img-01.png" alt="Aspera" />
+                </a>
+              </div>
+            </td>
+            <td class="cart__cell">
+              <div class="cart__wrapper">
+                <a class="cart__link" href="product.html">
+                  <p class="samples__type">
+                    эфирное масло
+                  </p>
+                  <h2 class="cart__title title">
+                    Грейпфрут
+                  </h2>
+                  <p>
+                    код: ABC123
+                  </p>
+                </a>
+              </div>
+            </td>
+            <td class="cart__cell">
+              <div class="cart__wrapper cart__wrapper--right">
+                <p class="samples__price ">
+                  5 200 <span>₽</span>
+                </p>
+                <div class="counter" data-step="1" data-min="1" data-max="100">
+                  <input class="counter__text" type="text" name="count" value="1">
+                  <a href="#" class="counter__minus">−</a>
+                  <a href="#" class="counter__plus">+</a>
+                </div>
+              </div>
+            </td>
+            <td class="cart__cell cart__cell--padding">
+              <div class="cart__wrapper cart__trashbin">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                  <path fill-rule="evenodd"
-                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                </svg>
-              </span>
-            </a>
-          </td>
-          <td class="cart__noheight">&nbsp;</td>
-        </tr>
-
-        <tr>
-          <!-- <td class="cart__noheight">&nbsp;</td> -->
-
-          <td class="cart__img">
-            <a href="productpage.html">
-              <img width="130" height="130" src="assets/img/products/img-product01@1x.webp" alt="Фото товара" />
-            </a>
-          </td>
-
-          <td class="cart__name" data-title="Name">
-            <!-- <a href="#">Набор «Оранжевое настроение»</a> -->
-            Набор «Оранжевое настроение»
-          </td>
-
-          <td class="cart__price" data-title="Price">
-            2 700 руб.
-          </td>
-
-          <td class="productcard productcard__quantity productcard__quantity--noborder" data-title="Quantity">
-            <div class="productcard__counter productcard__counter--cart">
-              <span class="productcard__decrease productcard__decrease--cart"></span>
-              <input type="text" value="1 шт." />
-              <span class="productcard__increase productcard__increase--cart"></span>
-            </div>
-          </td>
-
-          <td class="cart__subtotal" data-title="Total">
-            5 400 руб.
-          </td>
-
-          <td>
-            <a href="#" class="cart__remove" aria-label="Remove this item">
-              <span>
-                <svg width="1.25em" height="1.55em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg">
+                    d="M15.9483 9.0575C15.625 9.0575 15.3629 9.31959 15.3629 9.64298V20.7085C15.3629 21.0317 15.625 21.294 15.9483 21.294C16.2717 21.294 16.5338 21.0317 16.5338 20.7085V9.64298C16.5338 9.31959 16.2717 9.0575 15.9483 9.0575Z" />
                   <path
-                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                  <path fill-rule="evenodd"
-                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                </svg>
-              </span>
-            </a>
-          </td>
-          <td class="cart__noheight">&nbsp;</td>
-        </tr>
-
-        <tr>
-          <!-- <td class="cart__noheight">&nbsp;</td> -->
-
-          <td class="cart__img">
-            <a href="productpage.html">
-              <img width="130" height="130" src="assets/img/products/img-product01@1x.webp" alt="Фото товара" />
-            </a>
-          </td>
-
-          <td class="cart__name" data-title="Name">
-            <!-- <a href="#">Набор «Оранжевое настроение»</a> -->
-            Набор «Оранжевое настроение»
-          </td>
-
-          <td class="cart__price" data-title="Price">
-            2 700 руб.
-          </td>
-
-          <td class="productcard productcard__quantity productcard__quantity--noborder" data-title="Quantity">
-            <div class="productcard__counter productcard__counter--cart">
-              <span class="productcard__decrease productcard__decrease--cart"></span>
-              <input type="text" value="1 шт." />
-              <span class="productcard__increase productcard__increase--cart"></span>
-            </div>
-          </td>
-
-          <td class="cart__subtotal" data-title="Total">
-            5 400 руб.
-          </td>
-
-          <td>
-            <a href="#" class="cart__remove" aria-label="Remove this item">
-              <span>
-                <svg width="1.25em" height="1.55em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg">
+                    d="M9.0397 9.0575C8.71632 9.0575 8.45422 9.31959 8.45422 9.64298V20.7085C8.45422 21.0317 8.71632 21.294 9.0397 21.294C9.36309 21.294 9.62518 21.0317 9.62518 20.7085V9.64298C9.62518 9.31959 9.36309 9.0575 9.0397 9.0575Z" />
                   <path
-                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                  <path fill-rule="evenodd"
-                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    d="M4.00464 7.44274V21.8677C4.00464 22.7203 4.31727 23.521 4.86341 24.0955C5.40704 24.6716 6.16359 24.9986 6.95536 25H18.0328C18.8248 24.9986 19.5813 24.6716 20.1247 24.0955C20.6709 23.521 20.9835 22.7203 20.9835 21.8677V7.44274C22.0692 7.15458 22.7726 6.10575 22.6274 4.99174C22.482 3.87796 21.5331 3.04479 20.4097 3.04456H17.4121V2.31272C17.4155 1.69728 17.1722 1.10631 16.7365 0.671547C16.3008 0.237013 15.7089 -0.00495453 15.0935 7.6927e-05H9.89464C9.2792 -0.00495453 8.68732 0.237013 8.25164 0.671547C7.81596 1.10631 7.57262 1.69728 7.57605 2.31272V3.04456H4.57845C3.45506 3.04479 2.50618 3.87796 2.36072 4.99174C2.2155 6.10575 2.91898 7.15458 4.00464 7.44274ZM18.0328 23.829H6.95536C5.95432 23.829 5.17559 22.9691 5.17559 21.8677V7.4942H19.8126V21.8677C19.8126 22.9691 19.0338 23.829 18.0328 23.829ZM8.74701 2.31272C8.74312 2.00786 8.86296 1.71443 9.07931 1.49922C9.29544 1.28401 9.58955 1.16577 9.89464 1.17103H15.0935C15.3986 1.16577 15.6927 1.28401 15.9088 1.49922C16.1252 1.7142 16.245 2.00786 16.2411 2.31272V3.04456H8.74701V2.31272ZM4.57845 4.21552H20.4097C20.9917 4.21552 21.4636 4.68733 21.4636 5.26938C21.4636 5.85143 20.9917 6.32324 20.4097 6.32324H4.57845C3.9964 6.32324 3.52459 5.85143 3.52459 5.26938C3.52459 4.68733 3.9964 4.21552 4.57845 4.21552Z" />
+                  <path
+                    d="M12.4941 9.0575C12.1707 9.0575 11.9086 9.31959 11.9086 9.64298V20.7085C11.9086 21.0317 12.1707 21.294 12.4941 21.294C12.8175 21.294 13.0796 21.0317 13.0796 20.7085V9.64298C13.0796 9.31959 12.8175 9.0575 12.4941 9.0575Z" />
+                  <defs>
+                    <rect width="25" height="25" fill="white" />
+                  </defs>
                 </svg>
-              </span>
-            </a>
-          </td>
-          <td class="cart__noheight">&nbsp;</td>
-        </tr>
+              </div>
+            </td>
+          </tr>
+          <tr class="separator"></tr>
+          <tr class="cart__row">
+            <td class="cart__cell cart__cell--width">
+              <div class="cart__img">
+                <a class="cart__link" href="product.html">
+                  <img width="184" height="184" src="assets/img/bg/cart-img-01.png" alt="Aspera" />
+                </a>
+              </div>
+            </td>
+            <td class="cart__cell">
+              <div class="cart__wrapper">
+                <a class="cart__link" href="product.html">
+                  <p class="samples__type">
+                    эфирное масло
+                  </p>
+                  <h2 class="cart__title title">
+                    Грейпфрут
+                  </h2>
+                  <p>
+                    код: ABC123
+                  </p>
+                </a>
+              </div>
+            </td>
+            <td class="cart__cell">
+              <div class="cart__wrapper cart__wrapper--right">
+                <p class="samples__price ">
+                  5 200 <span>₽</span>
+                </p>
+                <div class="counter" data-step="1" data-min="1" data-max="100">
+                  <input class="counter__text" type="text" name="count" value="1">
+                  <a href="#" class="counter__minus">−</a>
+                  <a href="#" class="counter__plus">+</a>
+                </div>
+              </div>
+            </td>
+            <td class="cart__cell cart__cell--padding">
+              <div class="cart__wrapper cart__trashbin">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.9483 9.0575C15.625 9.0575 15.3629 9.31959 15.3629 9.64298V20.7085C15.3629 21.0317 15.625 21.294 15.9483 21.294C16.2717 21.294 16.5338 21.0317 16.5338 20.7085V9.64298C16.5338 9.31959 16.2717 9.0575 15.9483 9.0575Z" />
+                  <path
+                    d="M9.0397 9.0575C8.71632 9.0575 8.45422 9.31959 8.45422 9.64298V20.7085C8.45422 21.0317 8.71632 21.294 9.0397 21.294C9.36309 21.294 9.62518 21.0317 9.62518 20.7085V9.64298C9.62518 9.31959 9.36309 9.0575 9.0397 9.0575Z" />
+                  <path
+                    d="M4.00464 7.44274V21.8677C4.00464 22.7203 4.31727 23.521 4.86341 24.0955C5.40704 24.6716 6.16359 24.9986 6.95536 25H18.0328C18.8248 24.9986 19.5813 24.6716 20.1247 24.0955C20.6709 23.521 20.9835 22.7203 20.9835 21.8677V7.44274C22.0692 7.15458 22.7726 6.10575 22.6274 4.99174C22.482 3.87796 21.5331 3.04479 20.4097 3.04456H17.4121V2.31272C17.4155 1.69728 17.1722 1.10631 16.7365 0.671547C16.3008 0.237013 15.7089 -0.00495453 15.0935 7.6927e-05H9.89464C9.2792 -0.00495453 8.68732 0.237013 8.25164 0.671547C7.81596 1.10631 7.57262 1.69728 7.57605 2.31272V3.04456H4.57845C3.45506 3.04479 2.50618 3.87796 2.36072 4.99174C2.2155 6.10575 2.91898 7.15458 4.00464 7.44274ZM18.0328 23.829H6.95536C5.95432 23.829 5.17559 22.9691 5.17559 21.8677V7.4942H19.8126V21.8677C19.8126 22.9691 19.0338 23.829 18.0328 23.829ZM8.74701 2.31272C8.74312 2.00786 8.86296 1.71443 9.07931 1.49922C9.29544 1.28401 9.58955 1.16577 9.89464 1.17103H15.0935C15.3986 1.16577 15.6927 1.28401 15.9088 1.49922C16.1252 1.7142 16.245 2.00786 16.2411 2.31272V3.04456H8.74701V2.31272ZM4.57845 4.21552H20.4097C20.9917 4.21552 21.4636 4.68733 21.4636 5.26938C21.4636 5.85143 20.9917 6.32324 20.4097 6.32324H4.57845C3.9964 6.32324 3.52459 5.85143 3.52459 5.26938C3.52459 4.68733 3.9964 4.21552 4.57845 4.21552Z" />
+                  <path
+                    d="M12.4941 9.0575C12.1707 9.0575 11.9086 9.31959 11.9086 9.64298V20.7085C11.9086 21.0317 12.1707 21.294 12.4941 21.294C12.8175 21.294 13.0796 21.0317 13.0796 20.7085V9.64298C13.0796 9.31959 12.8175 9.0575 12.4941 9.0575Z" />
+                  <defs>
+                    <rect width="25" height="25" fill="white" />
+                  </defs>
+                </svg>
+              </div>
+            </td>
+          </tr>
+          <tr class="separator"></tr>
+          <tr class="cart__row">
+            <td class="cart__cell cart__cell--width">
+              <div class="cart__img">
+                <a class="cart__link" href="product.html">
+                  <img width="184" height="184" src="assets/img/bg/cart-img-01.png" alt="Aspera" />
+                </a>
+              </div>
+            </td>
+            <td class="cart__cell">
+              <div class="cart__wrapper">
+                <a class="cart__link" href="product.html">
+                  <p class="samples__type">
+                    эфирное масло
+                  </p>
+                  <h2 class="cart__title title">
+                    Грейпфрут
+                  </h2>
+                  <p>
+                    код: ABC123
+                  </p>
+                </a>
+              </div>
+            </td>
+            <td class="cart__cell">
+              <div class="cart__wrapper cart__wrapper--right">
+                <p class="samples__price ">
+                  5 200 <span>₽</span>
+                </p>
+                <div class="counter" data-step="1" data-min="1" data-max="100">
+                  <input class="counter__text" type="text" name="count" value="1">
+                  <a href="#" class="counter__minus">−</a>
+                  <a href="#" class="counter__plus">+</a>
+                </div>
+              </div>
+            </td>
+            <td class="cart__cell cart__cell--padding">
+              <div class="cart__wrapper cart__trashbin">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.9483 9.0575C15.625 9.0575 15.3629 9.31959 15.3629 9.64298V20.7085C15.3629 21.0317 15.625 21.294 15.9483 21.294C16.2717 21.294 16.5338 21.0317 16.5338 20.7085V9.64298C16.5338 9.31959 16.2717 9.0575 15.9483 9.0575Z" />
+                  <path
+                    d="M9.0397 9.0575C8.71632 9.0575 8.45422 9.31959 8.45422 9.64298V20.7085C8.45422 21.0317 8.71632 21.294 9.0397 21.294C9.36309 21.294 9.62518 21.0317 9.62518 20.7085V9.64298C9.62518 9.31959 9.36309 9.0575 9.0397 9.0575Z" />
+                  <path
+                    d="M4.00464 7.44274V21.8677C4.00464 22.7203 4.31727 23.521 4.86341 24.0955C5.40704 24.6716 6.16359 24.9986 6.95536 25H18.0328C18.8248 24.9986 19.5813 24.6716 20.1247 24.0955C20.6709 23.521 20.9835 22.7203 20.9835 21.8677V7.44274C22.0692 7.15458 22.7726 6.10575 22.6274 4.99174C22.482 3.87796 21.5331 3.04479 20.4097 3.04456H17.4121V2.31272C17.4155 1.69728 17.1722 1.10631 16.7365 0.671547C16.3008 0.237013 15.7089 -0.00495453 15.0935 7.6927e-05H9.89464C9.2792 -0.00495453 8.68732 0.237013 8.25164 0.671547C7.81596 1.10631 7.57262 1.69728 7.57605 2.31272V3.04456H4.57845C3.45506 3.04479 2.50618 3.87796 2.36072 4.99174C2.2155 6.10575 2.91898 7.15458 4.00464 7.44274ZM18.0328 23.829H6.95536C5.95432 23.829 5.17559 22.9691 5.17559 21.8677V7.4942H19.8126V21.8677C19.8126 22.9691 19.0338 23.829 18.0328 23.829ZM8.74701 2.31272C8.74312 2.00786 8.86296 1.71443 9.07931 1.49922C9.29544 1.28401 9.58955 1.16577 9.89464 1.17103H15.0935C15.3986 1.16577 15.6927 1.28401 15.9088 1.49922C16.1252 1.7142 16.245 2.00786 16.2411 2.31272V3.04456H8.74701V2.31272ZM4.57845 4.21552H20.4097C20.9917 4.21552 21.4636 4.68733 21.4636 5.26938C21.4636 5.85143 20.9917 6.32324 20.4097 6.32324H4.57845C3.9964 6.32324 3.52459 5.85143 3.52459 5.26938C3.52459 4.68733 3.9964 4.21552 4.57845 4.21552Z" />
+                  <path
+                    d="M12.4941 9.0575C12.1707 9.0575 11.9086 9.31959 11.9086 9.64298V20.7085C11.9086 21.0317 12.1707 21.294 12.4941 21.294C12.8175 21.294 13.0796 21.0317 13.0796 20.7085V9.64298C13.0796 9.31959 12.8175 9.0575 12.4941 9.0575Z" />
+                  <defs>
+                    <rect width="25" height="25" fill="white" />
+                  </defs>
+                </svg>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="button" href="category.html"><span>&larr; </span> продолжить покупки</a>
+    </div>
+    <div class="form-cart">
+      <form action="#">
+        <div class="form-cart__row">
+          <h3 class="form-cart__title">Товаров</h3>
+          <p class="form-cart__text">3<span> шт</span></p>
+        </div>
+        <div class="form-cart__row">
+          <h3 class="form-cart__title">Сумма</h3>
+          <p class="form-cart__text">5 200<span> ₽</span></p>
+        </div>
+        <button class="form-cart__button button button--red" type="submit" href="orders.html">заказать и забрать <span>
+            &rarr;</span></button>
+      </form>
+    </div>
+  </div>
 
-      </tbody>
-    </table>
-  </form>
+
 </section>
 <div class="bground">
   {% include "../templates/arrowup.njk" %}
