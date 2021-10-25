@@ -1,0 +1,92 @@
+.checkbox {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  color: #7a8184;
+  font-size: 12px;
+  line-height: 28px;
+  cursor: pointer;
+
+  @media screen and (max-width: $width-lg) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.checkbox input[type="checkbox"]:checked,
+.checkbox input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.checkbox input[type="checkbox"]:checked+label,
+.checkbox input[type="checkbox"]:not(:checked)+label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"]:checked+label:before,
+.checkbox input[type="checkbox"]:not(:checked)+label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  // border: 1px solid #e2ceca;
+  // box-sizing: border-box;
+  // box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox input[type="checkbox"]:checked+label:after,
+.checkbox input[type="checkbox"]:not(:checked)+label:after {
+  content: "";
+  position: absolute;
+
+  left: 3px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  // background: #8d4048;
+  background: url("../img/icons/icon-tick.svg") no-repeat 50% 50%;
+
+  transition: all 0.2s ease;
+}
+
+
+.checkbox input[type="checkbox"]:not(:checked)+label:after {
+  opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:checked+label:after {
+  opacity: 1;
+}
+
+.checkbox--square {
+  margin-bottom: 10px;
+
+  color: #977777;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+
+  cursor: pointer;
+}
+
+.checkbox--square input[type="checkbox"]:checked+label:before,
+.checkbox--square input[type="checkbox"]:not(:checked)+label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e2ceca;
+}
+
+.checkbox--square input[type="checkbox"]:checked+label:after,
+.checkbox--square input[type="checkbox"]:not(:checked)+label:after {
+  background: #8d4048;
+}

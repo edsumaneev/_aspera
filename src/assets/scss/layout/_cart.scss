@@ -7,6 +7,7 @@
   }
 }
 
+.cart__table tbody,
 .cart__table {
   width: 100%;
 }
@@ -18,16 +19,20 @@
   background: unset;
 
   @media screen and (max-width: $break-1350) {
+    padding-bottom: 0;
     width: 100%;
   }
 }
 
 .cart__cell {
-  // position: relative;
   padding: 30px 0 30px 30px;
 
   height: 100%;
   vertical-align: top;
+
+  @media screen and (max-width: $width-sm) {
+    padding: 15px 20px 0 20px;
+  }
 }
 
 .cart__cell--padding {
@@ -47,16 +52,31 @@
 
 .cart__wrapper--right {
   align-items: flex-end;
+
+  @media screen and (max-width: $width-sm) {
+    align-items: center;
+  }
 }
 
 .cart .samples__type {
   margin-top: 20px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: $width-sm) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
 }
 
 .cart .samples__price {
   margin-top: 57px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: $width-sm) {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
 }
 
 .cart .counter {
@@ -73,6 +93,17 @@
   font-weight: 200;
   font-size: 32px;
   text-align: left;
+
+  @media screen and (max-width: $width-sm) {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+
+.cart__code {
+  @media screen and (max-width: $width-sm) {
+    font-size: 16px;
+  }
 }
 
 .cart__trashbin svg {
@@ -90,7 +121,7 @@
 .cart__trashbin {
   @media screen and (max-width: $width-sm) {
     position: absolute;
-    bottom: 620px;
+    bottom: 390px;
     right: 20px;
   }
 }
@@ -102,6 +133,7 @@
   @media screen and (max-width: $width-sm) {
     display: flex;
     flex-direction: column;
+    width: 103%;
   }
 }
 
@@ -115,35 +147,38 @@
   padding: 26px 30px 37px 30px;
   width: 44%;
 
+  text-align: center;
+
   background: #fcf8f8;
   border: 1px solid #e2ceca;
 
   @media screen and (max-width: $break-1350) {
+    margin-bottom: 35px;
     width: 100%;
   }
-}
 
-// .form-cart__row {
-//   display: flex;
-//   justify-content: space-between;
-// }
-
-.form-cart {
-  text-align: center;
-
-  @media screen and (max-width: $break-1350) {
-    margin-bottom: 35px;
+  @media screen and (max-width: $width-sm) {
+    padding: 30px 10px 33px 10px;
   }
 }
 
 .form-cart__button {
   margin-top: 33px;
+
+  @media screen and (max-width: $width-sm) {
+    margin-top: 15px;
+  }
 }
 
 .form-cart__row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 30px;
+
+  @media screen and (max-width: $width-sm) {
+    margin-bottom: 15px;
+  }
 }
 
 .form-cart__title {
@@ -155,6 +190,10 @@
   line-height: 150%;
 
   color: #8d4048;
+
+  @media screen and (max-width: $width-sm) {
+    font-size: 20px;
+  }
 }
 
 .form-cart__text {
@@ -169,5 +208,13 @@
 
   span {
     font-size: 24px;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    font-size: 20px;
+
+    span {
+      font-size: 16px;
+    }
   }
 }
