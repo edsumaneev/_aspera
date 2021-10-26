@@ -1,0 +1,141 @@
+.goods {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $width-md) {
+    justify-content: center;
+  }
+}
+
+.goods__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 20px 20px;
+  margin-right: 17px;
+  margin-bottom: 25px;
+  max-width: 385px;
+  min-height: 640px;
+
+  text-align: center;
+  border: 1px solid #e2ceca;
+
+  @media screen and (max-width: $width-md) {
+    margin-right: 0;
+    min-height: unset;
+  }
+}
+
+.goods__item:nth-child(3n) {
+  margin-right: 0;
+
+  @media screen and (max-width: 1648px) {
+    margin-right: 17px;
+  }
+}
+
+.goods__item:nth-child(2n) {
+  @media screen and (max-width: 1648px) {
+    margin-right: 0;
+  }
+}
+
+.goods__tag {
+  z-index: 2;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 20px;
+  // min-width: 118px;
+  padding: 7px 30px;
+
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  background: #8d4048;
+}
+
+.goods__tag--dark {
+  background: #3f3133;
+}
+
+.goods__tag--none {
+  display: none;
+}
+
+.goods__type {
+  letter-spacing: 0.2em;
+
+  color: #977777;
+}
+
+.goods__img {
+  margin-bottom: 25px;
+}
+
+.goods__title {
+  margin-bottom: 20px;
+  color: #8d4048;
+  font-size: 24px;
+  line-height: 38px;
+}
+
+.goods__price {
+  margin-bottom: 35px;
+  color: #3f3133;
+  font-size: 36px;
+  line-height: 49px;
+
+  span {
+    font-size: 24px;
+  }
+}
+
+.goods__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #8d4048;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+
+  cursor: pointer;
+}
+
+.goods__cart:hover svg,
+.goods__cart:hover {
+  color: #977777;
+  transition: ease-in-out 0.3s;
+  stroke: #977777;
+}
+
+.goods__bag {
+  margin-bottom: 9px;
+}
+
+.goods__bag svg {
+  stroke: #8d4048;
+}
+
+.goods .button-wrapper {
+  width: 100%;
+}
+
+.goods .button {
+  margin-top: 30px;
+  min-width: unset;
+  width: 100%;
+}
+
+.category .showmore {
+  margin-top: 75px;
+  width: auto;
+}

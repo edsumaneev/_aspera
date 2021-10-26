@@ -1,0 +1,28 @@
+.selects__item {
+  appearance: none;
+  display: inline-block;
+  padding: 18px 25px 19px 15px;
+
+  width: 100%;
+  color: #977777;
+
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #977777;
+
+  background: url("../img/icons/select-arrow.png") no-repeat right;
+}
+
+.selects__item:focus,
+.selects__item:active {
+  outline: none;
+}
+
+.selects__wrapper {
+  margin-bottom: 15px;
+  width: 295px;
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
+}

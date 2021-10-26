@@ -4,15 +4,22 @@ require('hammerjs');
 
 $(function () {
   $('[data-toggle="popover"]').popover();
-  console.log('popover');
 });
 
 $(document).click(function (e) {
   if (!$(e.target).is('[data-toggle="popover"]')) {
     $('[data-toggle="popover"]').popover('hide');
-    console.log('yes');
   }
 });
+
+// category filters
+if ($(".category").length > 0) {
+  $('.category__title--mobile').on('click', function (event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $('.sidebar').toggleClass('active');
+  });
+}
 
 
 

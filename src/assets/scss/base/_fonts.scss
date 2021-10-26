@@ -35,7 +35,7 @@
     }
 }
 
-// @include font-face("bootstrap-icons", "bootstrap-icons", "../fonts/bootstrap-icons", 400, "oldie");
 @include font-face("OpenSans", "OpenSans-Light", "../fonts/OpenSans-Light", 300, "oldie");
+@include font-face("OpenSans", "OpenSans-SemiBold", "../fonts/OpenSans-SemiBold", 600, "oldie");
 @include font-face("Raleway", "Raleway-ExtraLight", "../fonts/Raleway-ExtraLight", 200, "oldie");
 @include font-face("Raleway", "Raleway-Medium", "../fonts/Raleway-Medium", 500, "oldie");

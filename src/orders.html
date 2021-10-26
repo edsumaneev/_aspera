@@ -1,7 +1,60 @@
 {% set title = "Заказ | Aspera" %}
 {% include "../templates/header.njk" %}
-
-
+<h1 class="title toptitle container">Заказать и забрать</h1>
+<section class="orders container">
+  <div class="orders__map">
+    <p class="orders__text">
+      Выберите удобную для Вас аптеку и мы дотсавим в нее Ваш заказ. Доставка занимает от 1 до 3х дней.
+      После того, как Ваш заказ будет доставлен, мы свяжемся с Вами. Вы сможете оплатить заказ в аптеке с помощью
+      наличных денег или карты.
+    </p>
+    <div class="orders__inner">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1185.858676918327!2d30.265060464358093!3d60.00896285920349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963439972a30a5%3A0x38e235fa580fa709!2z0YPQuy4g0JzQsNGA0YjQsNC70LAg0J3QvtCy0LjQutC-0LLQsCwgMjgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTczNzU!5e0!3m2!1sru!2sru!4v1634647039728!5m2!1sru!2sru"
+        width="937" height="869" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+  <div class="form-orders">
+    <h2 class="form-orders__title">Контактные данные</h2>
+    <form action="#">
+      <label for="name"></label>
+      <input class="form-orders__input" type="text" id="name" placeholder="Ваше имя" required>
+      <label for="phone"></label>
+      <input class="form-orders__input" type="tel" id="phone" placeholder="Телефон" required>
+      <label for="mail"></label>
+      <input class="form-orders__input" type="email" id="mail" placeholder="E-mail">
+      <div class="form-orders__row">
+        <h3 class="form-orders__subtitle">Адрес доставки</h3>
+        <p class="form-orders__text form-orders__text--bold"><span>Апетка 1</span><br>Выборгское шоссе, 7, корп. 1</p>
+      </div>
+      <div class="form-orders__row">
+        <h3 class="form-orders__subtitle">Товаров</h3>
+        <p class="form-orders__text">3<span> шт</span></p>
+      </div>
+      <div class="form-orders__row">
+        <h3 class="form-orders__subtitle">Сумма</h3>
+        <p class="form-orders__text">5 200<span> ₽</span></p>
+      </div>
+      <div class="form-orders__row">
+        <h3 class="form-orders__subtitle">Доставка</h3>
+        <p class="form-orders__text">200<span> ₽</span></p>
+      </div>
+      <div class="form-orders__row form-orders__row--total">
+        <h3 class="form-orders__title form-orders__title--total">Итого</h3>
+        <p class="form-orders__text form-orders__text--total">5 400<span> ₽</span></p>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="agree" id="agree" value="1" checked required>
+        <label for="agree">Даю согласие с <a class="checkbox__link" href="#">условиями работы сайта</a></label>
+      </div>
+      <a class="form-orders__button button button--red" href="orders.html">заказать и забрать <span>
+          &rarr;</span></a>
+    </form>
+  </div>
+</section>
+<div class="button-right container">
+  <a class="button" href="cart.html"><span>&larr; </span> вернуться в корзину</a>
+</div>
 <div class="bground">
   {% include "../templates/arrowup.njk" %}
 </div>
