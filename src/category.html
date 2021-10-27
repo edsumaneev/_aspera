@@ -111,7 +111,7 @@
           <p class="goods__type">эфирное масло</p>
           <h3 class="goods__title">Роза</h3>
           <p class="goods__price"><span class="goods__sale"></span> 5 200 <span>₽</span></p>
-          <a class="goods__cart">
+          <a class="goods__cart" data-bs-toggle="modal" data-bs-target="#modal-1">
             <span class="goods__bag">
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -141,7 +141,7 @@
           <p class="goods__type">эфирное масло</p>
           <h3 class="goods__title">Роза</h3>
           <p class="goods__price"><span class="goods__sale"></span> 5 200 <span>₽</span></p>
-          <a class="goods__cart">
+          <a class="goods__cart" data-bs-toggle="modal" data-bs-target="#modal-1">
             <span class="goods__bag">
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -171,7 +171,7 @@
           <p class="goods__type">эфирное масло</p>
           <h3 class="goods__title">Роза</h3>
           <p class="goods__price"><span class="goods__sale"></span> 5 200 <span>₽</span></p>
-          <a class="goods__cart">
+          <a class="goods__cart" data-bs-toggle="modal" data-bs-target="#modal-1">
             <span class="goods__bag">
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -201,7 +201,7 @@
           <p class="goods__type">эфирное масло</p>
           <h3 class="goods__title">Роза</h3>
           <p class="goods__price"><span class="goods__sale"></span> 5 200 <span>₽</span></p>
-          <a class="goods__cart">
+          <a class="goods__cart" data-bs-toggle="modal" data-bs-target="#modal-1">
             <span class="goods__bag">
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -231,7 +231,7 @@
           <p class="goods__type">эфирное масло</p>
           <h3 class="goods__title">Роза</h3>
           <p class="goods__price"><span class="goods__sale"></span> 5 200 <span>₽</span></p>
-          <a class="goods__cart">
+          <a class="goods__cart" data-bs-toggle="modal" data-bs-target="#modal-1">
             <span class="goods__bag">
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -261,7 +261,7 @@
           <p class="goods__type">эфирное масло</p>
           <h3 class="goods__title">Роза</h3>
           <p class="goods__price"><span class="goods__sale"></span> 5 200 <span>₽</span></p>
-          <a class="goods__cart">
+          <a class="goods__cart" data-bs-toggle="modal" data-bs-target="#modal-1">
             <span class="goods__bag">
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -291,6 +291,34 @@
           </svg>
         </span>
       </a>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <h3 class="modal__title title">Добавлено в корзину</h3>
+      <div class="modal__wrapper">
+        <div class="modal__img">
+          <a href="product.html">
+            <img src="assets/img/bg/goods-img-01.png" alt="Aspera" width="334" height="450">
+          </a>
+        </div>
+        <div class="goods__dsc">
+          <p class="goods__type">эфирное масло</p>
+          <h3 class="goods__title">Роза</h3>
+          <p class="modal__code">
+            код: ABC123
+          </p>
+          <p class="goods__price"><span class="goods__sale"></span> 5 200 <span>₽</span></p>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <a class="button" href="category.html"><span>&larr; </span> продолжить покупки</a>
+        <a class="button button--red" href="cart.html">перейти в корзину <span> &rarr;</span></a>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,187 @@
+.modal {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 0;
+
+  overflow-y: auto;
+
+  @media screen and (max-width: 1050px) {
+    padding-top: 0;
+  }
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.btn-close {
+  background-size: 30px;
+
+  @media screen and (max-width: $width-md) {
+    background-size: 20px;
+  }
+}
+
+.btn-close:hover {
+  transform: rotate(90deg);
+  transition: ease-in-out 0.3s;
+}
+
+.btn-close:focus {
+  outline: none;
+}
+
+.modal-dialog {
+  min-width: 1000px;
+
+  @media screen and (max-width: 1050px) {
+    min-width: 100%;
+    margin: 0;
+  }
+}
+
+.modal__wrapper {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $width-lg) {
+    flex-direction: column;
+  }
+}
+
+.modal-header {
+  align-items: flex-start;
+  padding: 0;
+
+  border: none;
+}
+
+.modal-content {
+  padding: 50px;
+
+  @media screen and (max-width: $width-md) {
+    padding: 20px;
+  }
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media screen and (max-width: $width-md) {
+    flex-direction: column;
+  }
+}
+
+.modal__img {
+  width: 286px;
+  height: 286px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: $width-md) {
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: unset;
+    height: 185px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.modal__title {
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 150%;
+  text-align: left;
+
+  @media screen and (max-width: $width-lg) {
+    margin: 30px 0;
+  }
+}
+
+.modal__subtitle {
+  margin-top: 15px;
+
+  color: $font-main;
+
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+
+.modal__subtitle--margin {
+  margin-top: 0;
+}
+
+.modal__subtitle--big {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal__text {
+  position: relative;
+  padding-left: 15px;
+
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+
+.modal__text::before {
+  position: absolute;
+  content: "•";
+  left: 5px;
+  width: 1px;
+  height: 1px;
+}
+
+.list .modal__text {
+  padding-left: 0;
+}
+
+.list .modal__text::before {
+  display: none;
+}
+
+.modal__group {
+  margin-bottom: 10px;
+}
+
+.modal__code {
+  margin-bottom: 50px;
+
+  @media screen and (max-width: $width-sm) {
+    font-size: 16px;
+  }
+}
+
+.modal .button__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  @media screen and (max-width: $width-lg) {
+    a {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
