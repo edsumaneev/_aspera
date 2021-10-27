@@ -8,20 +8,26 @@ $(function () {
 
 $(document).click(function (e) {
   if (!$(e.target).is('[data-toggle="popover"]')) {
-    $('[data-toggle="popover"]').popover('hide');
+    $('[data-toggle="popover"]').popover("hide");
   }
 });
 
 // category filters
 if ($(".category").length > 0) {
-  $('.category__title--mobile').on('click', function (event) {
+  $(".category__title--mobile").on("click", function (event) {
     event.preventDefault();
-    $(this).toggleClass('active');
-    $('.sidebar').toggleClass('active');
+    $(this).toggleClass("active");
+    $(".sidebar").toggleClass("active");
   });
 }
 
-
+// orders select
+if ($(".orders").length > 0) {
+  $("input[type=radio]").on("click", function (e) {
+    $("div").removeClass("selected");
+    $(this).closest("div").addClass("selected");
+  });
+}
 
 // hamburger
 $('.hamburger').on('click', function (event) {
