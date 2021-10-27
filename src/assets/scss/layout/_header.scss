@@ -170,23 +170,6 @@
   background-color: transparent;
 }
 
-.header__search::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-
-  top: 128px;
-  background: #e2ceca;
-  right: 10px;
-}
-
-.active.header__search::after {
-  width: 490px;
-  height: 1px;
-  transition: ease-in-out 0.8s;
-}
-
 .header__inpsearch.active {
   padding-left: 28px;
   padding-bottom: 0;
@@ -197,4 +180,6 @@
   transition: all ease-in-out 0.3s;
   outline: none;
   background: #fcf8f8;
+  border-top: 1px solid #e2ceca;
+  border-bottom: 1px solid #e2ceca;
 }

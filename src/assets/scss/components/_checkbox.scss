@@ -44,16 +44,12 @@
   cursor: pointer;
 }
 
-.address__item~input[type="radio"]:checked {
-  background-color: red;
-}
-
 .checkbox input[type="checkbox"]:checked+label:before,
 .checkbox input[type="checkbox"]:not(:checked)+label:before {
   content: "";
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 18px;
   height: 18px;
 }
@@ -76,8 +72,8 @@
   content: "";
   position: absolute;
 
-  left: 4px;
-  top: 24px;
+  left: 3px;
+  top: 3px;
   width: 12px;
   height: 12px;
   background: url("../img/icons/icon-tick.svg") no-repeat 50% 50%;
