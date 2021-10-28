@@ -185,3 +185,35 @@
   top: 20px;
   right: 20px;
 }
+
+.modal__type {
+  letter-spacing: 0.2em;
+
+  color: #977777;
+}
+
+.modal__subtitle {
+  margin-bottom: 20px;
+  color: #8d4048;
+  font-size: 24px;
+  line-height: 38px;
+}
+
+.modal__price {
+  margin-bottom: 35px;
+  color: #3f3133;
+  font-size: 36px;
+  line-height: 49px;
+
+  span {
+    font-size: 24px;
+  }
+}
+
+.modal__sale {
+  font-size: 18px;
+  line-height: 25px;
+  text-decoration-line: line-through;
+
+  color: #977777;
+}
