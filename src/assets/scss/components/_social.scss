@@ -44,6 +44,10 @@
   }
 }
 
+.social__item:last-child {
+  margin-bottom: 0;
+}
+
 .social__link {
   font-size: 0;
 

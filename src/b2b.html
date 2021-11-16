@@ -1,0 +1,25 @@
+{% set title = "Контакты | Aspera" %}
+{% include "../templates/header.njk" %}
+<div class="feedback">
+  <h2 class="feedback__title title toptitle">Форма заявки</h2>
+  <form class="feedback__form" action="#" method="post">
+    <label for="name"></label>
+    <input class="feedback__input" type="text" id="name" placeholder="Ваше имя" required>
+    <label for="phone"></label>
+    <input class="feedback__input" type="text" id="companyname" placeholder="Название компании" required>
+    <label for="companyname"></label>
+    <input class="feedback__input" type="tel" id="phone" placeholder="Телефон" required>
+    <label for="mail"></label>
+    <input class="feedback__input" type="email" id="mail" placeholder="E-mail">
+    <textarea class="feedback__text" name="messag" cols="30" rows="5" placeholder="Сообщение"></textarea>
+    <div class="checkbox">
+      <input type="checkbox" name="agree" id="agree" value="1" checked required>
+      <label for="agree">Соглашаюсь с политикой конфиденциальности</label>
+    </div>
+    <button class="button" type="submit">отправить<span> &rarr;</span></button>
+  </form>
+</div>
+<div class="bground">
+  {% include "../templates/arrowup.njk" %}
+</div>
+{% include "../templates/footer.njk" %}

@@ -4,9 +4,12 @@
   justify-content: space-between;
   align-items: baseline;
 
+  margin-bottom: 50px;
+
   @media screen and (max-width: $width-lg) {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 25px;
   }
 }
 
@@ -35,20 +38,6 @@
   width: 1px;
 
   background: #e2ceca;
-
-  @media screen and (max-width: $width-lg) {
-    display: none;
-  }
-}
-
-.advantages__item:nth-child(2)::before {
-  top: -1300px;
-  height: 1300px;
-
-  @media screen and (max-width: $break-1720) {
-    top: -280px;
-    height: 280px;
-  }
 
   @media screen and (max-width: $width-lg) {
     display: none;

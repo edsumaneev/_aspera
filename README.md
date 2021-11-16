@@ -13,3 +13,4 @@
 # https://foli.onrender.com/aspera/cart.html
 # https://foli.onrender.com/aspera/orders.html
 # https://foli.onrender.com/aspera/orders-thanks.html
+# https://foli.onrender.com/aspera/b2b.html.html

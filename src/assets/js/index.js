@@ -206,11 +206,7 @@ $(".tabs__accordion").click(function () {
   $(".tabs__header").removeClass("active");
   $(".tabs__header[rel^='" + d_activeTab + "']").addClass("active");
 });
-/* дополнительный класс tab_last, 
-чтобы добавить границу к правой 
-стороне последней вкладки. */
-// $('ul.tabs__list li').last().addClass("tab_last");
-// END tabs
+
 // timeline https://codepen.io/tutsplus/pen/ZKpNwm
 if ($(".timeline").length > 0) {
   (function () {

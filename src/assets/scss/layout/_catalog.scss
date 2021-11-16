@@ -16,8 +16,10 @@
 }
 
 .catalog__item {
+  overflow: hidden;
   margin-right: 77px;
   margin-left: 77px;
+  max-height: 832px;
 
   @media screen and (max-width: $width-xl) {
     margin-right: 10px;
@@ -36,6 +38,17 @@
   display: block;
   box-sizing: border-box;
   justify-content: center;
+
+  height: 100%;
+}
+
+.catalog__img {
+  height: 100%;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
 }
 
 .catalog__link:hover .catalog__img {
