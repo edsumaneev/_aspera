@@ -182,4 +182,9 @@
   background: #fcf8f8;
   border-top: 1px solid #e2ceca;
   border-bottom: 1px solid #e2ceca;
+
+  @media(max-width: 940px) {
+    width: 320px;
+    right: -120px;
+  }
 }

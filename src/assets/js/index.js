@@ -96,13 +96,30 @@ if ($('.home').length > 0) {
     infinite: true,
     autoplay: false,
     touchThreshold: 100,
-    // fade: true,
     dots: false,
     prevArrow: $(".home__prev"),
     nextArrow: $(".home__next")
   });
 };
 
+if ($('.catalog').length > 0) {
+  $(".catalog__list").slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: false,
+    touchThreshold: 100,
+    dots: false,
+    prevArrow: $(".catalog__prev"),
+    nextArrow: $(".catalog__next"),
+    responsive: [{
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 1
+      }
+    }, ]
+  });
+};
 // search
 $(".header__search").on("click", "button", function (e) {
   if ($(".header__inpsearch").val() == "" || !$("input[type='search']").hasClass("active")) {

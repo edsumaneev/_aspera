@@ -49,10 +49,6 @@
   @media screen and (max-width: $width-lg) {
     width: 365px;
   }
-
-  // @media screen and (max-width: $width-sm) {
-  //   width: 90%;
-  // }
 }
 
 .timeline__item:last-child,
@@ -86,6 +82,8 @@
 }
 
 .timeline__item:last-child span {
+  right: 108%;
+
   @media screen and (max-width: $width-sm) {
     right: 120%;
   }

@@ -1,28 +1,59 @@
 {% set title = "Каталог | Aspera" %}
 {% include "../templates/header.njk" %}
-<section class="catalog">
-  <h1 class="title toptitle container">Каталог</h1>
-  <div class="catalog__list container">
+<section class="catalog container">
+  <h1 class="title toptitle">Каталог</h1>
+  <div class="catalog__list">
     <div class="catalog__item">
-      <a class="catalog__link" href="category.html">
-        <div class="catalog__img">
-          <img src="assets/img/bg/catalog-bg-01.png" alt="Aspera" width="662" height="832">
-        </div>
-        <div class="catalog__inner">
+      <div class="catalog__img">
+        <img src="assets/img/bg/catalog-bg-01.png" alt="Aspera" width="662" height="832">
+      </div>
+      <div class="catalog__inner">
+        <a class="catalog__link" href="category.html">
           <h2 class="catalog__title title">Эфирные масла</h2>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
+
     <div class="catalog__item">
-      <a class="catalog__link" href="category.html">
-        <div class="catalog__img">
-          <img src="assets/img/bg/catalog-bg-02.png" alt="Aspera" width="662" height="832">
-        </div>
-        <div class="catalog__inner">
+      <div class="catalog__img">
+        <img src="assets/img/bg/catalog-bg-02.png" alt="Aspera" width="662" height="832">
+      </div>
+      <div class="catalog__inner">
+        <a class="catalog__link" href="category.html">
           <h2 class="catalog__title title">Косметика</h2>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
+
+    <div class="catalog__item">
+      <div class="catalog__img">
+        <img src="assets/img/bg/catalog-bg-01.png" alt="Aspera" width="662" height="832">
+      </div>
+      <div class="catalog__inner">
+        <a class="catalog__link" href="category.html">
+          <h2 class="catalog__title title">Эфирные масла</h2>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="catalog__arrow container">
+    <button class="catalog__prev">prev
+      <span>
+        <svg width="69" height="130" viewBox="0 0 69 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M65.6997 0.031738C67.2542 0.028839 68.5166 1.287 68.5195 2.8415C68.5209 3.59091 68.2232 4.30998 67.6925 4.83932L7.75644 64.7699L67.6925 124.7C68.7932 125.801 68.7932 127.585 67.6925 128.686C66.5919 129.786 64.8076 129.786 63.7069 128.686L1.78358 66.7624C0.684797 65.6634 0.684797 63.8816 1.78358 62.7823L63.7069 0.859253C64.2347 0.329651 64.9519 0.031738 65.6997 0.031738Z" />
+        </svg>
+      </span>
+    </button>
+    <button class="catalog__next">next
+      <span>
+        <svg width="69" height="130" viewBox="0 0 69 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.81144 129.479C2.25693 129.482 0.994545 128.224 0.991643 126.67C0.990323 125.92 1.28798 125.201 1.81864 124.672L61.7547 64.7414L1.81864 4.81108C0.718002 3.71045 0.718002 1.92611 1.81864 0.825475C2.91927 -0.275158 4.70361 -0.275158 5.80424 0.825475L67.7276 62.7488C68.8264 63.8479 68.8264 65.6296 67.7276 66.7289L5.80424 128.652C5.27649 129.182 4.55927 129.479 3.81144 129.479Z" />
+        </svg>
+      </span>
+    </button>
   </div>
 </section>
 <div class="bground">

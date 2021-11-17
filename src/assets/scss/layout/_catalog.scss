@@ -1,4 +1,5 @@
 .catalog {
+  position: relative;
   margin-bottom: 200px;
 
   @media screen and (max-width: $width-xl) {
@@ -6,40 +7,36 @@
   }
 }
 
-.catalog__list {
-  display: flex;
-  justify-content: space-between;
-
-  @media screen and (max-width: $width-sm) {
-    flex-direction: column;
-  }
-}
-
 .catalog__item {
+  position: relative;
   overflow: hidden;
-  margin-right: 77px;
-  margin-left: 77px;
+  margin-right: 75px;
+  margin-left: 75px;
   max-height: 832px;
+  width: unset !important;
 
-  @media screen and (max-width: $width-xl) {
+  @media screen and (max-width: 1530px) {
     margin-right: 10px;
     margin-left: 10px;
+    height: 650px;
   }
 
   @media screen and (max-width: $width-sm) {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 35px;
+    height: 377px;
   }
 }
 
 .catalog__link {
-  position: relative;
   display: block;
   box-sizing: border-box;
   justify-content: center;
 
   height: 100%;
+
+  text-align: center;
 }
 
 .catalog__img {
@@ -51,7 +48,7 @@
   }
 }
 
-.catalog__link:hover .catalog__img {
+.catalog__link:hover {
   opacity: 0.5;
   transition: ease-in-out 0.5s;
 }
@@ -79,4 +76,72 @@
   @media screen and (max-width: $width-xl) {
     font-size: 20px;
   }
+}
+
+
+.catalog__arrow {
+  z-index: 2;
+  position: absolute;
+  top: 265px;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $break-1720) {
+    top: 280px;
+  }
+
+  @media screen and (max-width: $width-lg) {
+    top: 110px;
+  }
+}
+
+.catalog__prev,
+.catalog__next {
+  padding-right: 34px;
+  padding-left: 33px;
+  font-size: 0;
+
+  border: none;
+  background-color: transparent;
+
+  svg {
+    fill: $font-title;
+    opacity: 0.3;
+  }
+
+  @media screen and (max-width: $break-1720) {
+    padding-right: 134px;
+    padding-left: 133px;
+
+    svg {
+      width: 36px;
+      height: 69px;
+    }
+  }
+
+  @media screen and (max-width: $width-lg) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.catalog__prev:hover,
+.catalog__next:hover {
+  svg {
+    opacity: 1;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+.catalog__prev:focus,
+.catalog__next:focus {
+  outline: none;
+}
+
+.catalog__prev {
+  left: 0;
+}
+
+.catalog__next {
+  right: 0;
 }
